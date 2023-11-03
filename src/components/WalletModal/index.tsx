@@ -21,9 +21,9 @@ import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 const chainName = process.env.REACT_APP_CHAIN_NAME || ''
-const chainIDHex = process.env.REACT_APP_CHAIN_ID_HEX || ''
 const chainRPC = process.env.REACT_APP_NETWORK_URL || ''
 const explorer = process.env.REACT_APP_CHAIN_EXPLORER || ''
+const chainId = parseInt(process.env.REACT_APP_CHAIN_ID || '')
 
 const CloseIcon = styled.div`
   position: absolute;
@@ -300,11 +300,12 @@ export default function WalletModal({
           method: 'wallet_switchEthereumChain',
           params: [
             {
-              chainId: chainIDHex
+              chainId: `0x${chainId.toString(16)}`
             }
           ]
         })
       } catch (error) {
+        addChain()
         console.error(error)
       }
     }
@@ -316,7 +317,7 @@ export default function WalletModal({
         method: 'wallet_addEthereumChain',
         params: [
           {
-            chainId: chainIDHex,
+            chainId: `0x${chainId.toString(16)}`,
             rpcUrls: [chainRPC],
             chainName,
             nativeCurrency: {
@@ -346,9 +347,6 @@ export default function WalletModal({
                 <h5>Please connect to the appropriate {chainName} network.</h5>
                 <ButtonPrimary onClick={switchChain} style={{ marginBottom: '10px' }}>
                   Switch {chainName} Network
-                </ButtonPrimary>
-                <ButtonPrimary onClick={addChain} className="btns">
-                  Add {chainName} Network
                 </ButtonPrimary>
               </>
             ) : (

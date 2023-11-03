@@ -8,7 +8,7 @@ const Router_MAP: { [key in ChainId]: string } = {
   [ChainId.MAINNET]: `https://raw.githubusercontent.com/MXCzkEVM/wannseeswap-tokenlist/main/tokenlist-mainnet.json?version=${version}`,
   [ChainId.WANNSEE]: `https://raw.githubusercontent.com/MXCzkEVM/wannseeswap-tokenlist/main/tokenlist.json?version=${version}`,
   [ChainId.WANNSEEMAINNET]: `https://raw.githubusercontent.com/MXCzkEVM/wannseeswap-tokenlist/main/tokenlist-mainnet.json?version=${version}`,
-  [ChainId.HARDHAT]: '',
+  [ChainId.HARDHAT]: `https://raw.githubusercontent.com/MXCzkEVM/wannseeswap-tokenlist/main/tokenlist-mainnet.json?version=${version}`,
 }
 
 const Info_MAP: { [key in ChainId]: string } = {
@@ -34,7 +34,9 @@ const TaxToken_MAP: any = {
     // Gin1689 Coin
     "0xC7e0C30915aC225e4804AaEFC0707795B26C9108",
     // Maxis Token
-    "0x7eB14d2cF852aD5E20dd46Af3D2ddA87A1E67bAf"
+    "0x7eB14d2cF852aD5E20dd46Af3D2ddA87A1E67bAf",
+    // TAILZ Coin
+    "0xbccae479722530Ff9326FEc0cE8c15B4a79C6bD8"
   ],
   [ChainId.HARDHAT]: [],
 }
