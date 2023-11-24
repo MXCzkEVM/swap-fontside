@@ -173,5 +173,8 @@
   "Prices and pool share": "Preise und Poolanteil",
   "seePer": "{{from}} pro {{to}}",
   "Your position": "Dein Standpunkt",
-  "Supply": "Liefern"
+  "Supply": "Liefern",
+  "Connect to a wallet": "Stellen Sie eine Verbindung zu einer Brieftasche her",
+  "Learn more about wallets": "Erfahren Sie mehr über Geldbörsen",
+  "New to Ethereum": "Neu bei Ethereum?"
 }

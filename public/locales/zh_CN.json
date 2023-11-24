@@ -173,5 +173,8 @@
   "Prices and pool share": "价格和池份额",
   "seePer": "{{from}}每{{to}}",
   "Your position": "流动池",
-  "Supply": "供应"
+  "Supply": "供应",
+  "Connect to a wallet": "连接钱包",
+  "Learn more about wallets": "了解更多钱包的信息",
+  "New to Ethereum": "Ethereum 新手？"
 }

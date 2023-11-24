@@ -19,6 +19,7 @@ import { injected, fortmatic, portis } from '../../connectors'
 import { OVERLAY_READY } from '../../connectors/Fortmatic'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { AbstractConnector } from '@web3-react/abstract-connector'
+import { useTranslation } from 'react-i18next'
 
 const chainName = process.env.REACT_APP_CHAIN_NAME || ''
 const chainRPC = process.env.REACT_APP_NETWORK_URL || ''
@@ -132,6 +133,7 @@ export default function WalletModal({
 }) {
   // important that these are destructed from the account-specific web3-react context
   const { active, account, connector, activate, error } = useWeb3React()
+  const { t } = useTranslation()
 
   const [walletView, setWalletView] = useState(WALLET_VIEWS.ACCOUNT)
 
@@ -385,7 +387,7 @@ export default function WalletModal({
           </HeaderRow>
         ) : (
           <HeaderRow>
-            <HoverText>Connect to a wallet</HoverText>
+            <HoverText>{t('Connect to a wallet')}</HoverText>
           </HeaderRow>
         )}
         <ContentWrapper>
@@ -401,8 +403,8 @@ export default function WalletModal({
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
-              <span>New to Ethereum? &nbsp;</span>{' '}
-              <ExternalLink href="https://ethereum.org/wallets/">Learn more about wallets</ExternalLink>
+              <span>{t('New to Ethereum')} &nbsp;</span>{' '}
+              <ExternalLink href="https://ethereum.org/wallets/">{t('Learn more about wallets')}</ExternalLink>
             </Blurb>
           )}
         </ContentWrapper>

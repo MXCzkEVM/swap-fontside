@@ -173,5 +173,8 @@
   "Prices and pool share": "가격 및 수영장 점유율",
   "seePer": "{{from}}당 {{to}}",
   "Your position": "너의 위치",
-  "Supply": "공급"
+  "Supply": "공급",
+  "Connect to a wallet": "지갑에 연결",
+  "Learn more about wallets": "지갑에 대해 자세히 알아보기",
+  "New to Ethereum": "이더리움을 처음 사용하시나요?"
 }

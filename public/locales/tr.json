@@ -173,5 +173,8 @@
   "Prices and pool share": "Fiyatlar ve havuz payı",
   "seePer": "{{to}} başına {{from}}",
   "Your position": "Senin pozisyonun",
-  "Supply": "Tedarik"
+  "Supply": "Tedarik",
+  "Connect to a wallet": "Bir cüzdana bağlanın",
+  "Learn more about wallets": "Cüzdanlar hakkında daha fazla bilgi edinin",
+  "New to Ethereum": "Ethereum'da yeni misiniz?"
 }

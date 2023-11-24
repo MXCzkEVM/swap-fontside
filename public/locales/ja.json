@@ -173,5 +173,8 @@
   "Prices and pool share": "料金とプールシェア",
   "seePer": "{{from}} 毎 {{to}}",
   "Your position": "あなたの流動性プール",
-  "Supply": "供給"
+  "Supply": "供給",
+  "Connect to a wallet": "ウォレットに接続する",
+  "Learn more about wallets": "ウォレットについて詳しく見る",
+  "New to Ethereum": "イーサリアムは初めてですか?"
 }

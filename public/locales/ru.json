@@ -173,5 +173,8 @@
   "Prices and pool share": "Цены и доля пула",
   "seePer": "{{from}} за {{to}}",
   "Your position": "Твоя позиция",
-  "Supply": "Поставлять"
+  "Supply": "Поставлять",
+  "Connect to a wallet": "Подключитесь к кошельку",
+  "Learn more about wallets": "Узнайте больше о кошельках",
+  "New to Ethereum": "Впервые в Эфириуме?"
 }
