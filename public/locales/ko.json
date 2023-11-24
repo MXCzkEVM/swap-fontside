@@ -183,5 +183,20 @@
   "Transaction slippage tips": "생산량이 추정됩니다. \n가격이 {{slippage}} 이상 변경되면 거래가 취소됩니다.",
   "lp_token Pool Tokens": "{{token}} 풀 토큰",
   "Symbol Deposited": "{{symbol}} 입금됨",
-  "Rates": "요금"
+  "Rates": "요금",
+  "Supplying l_amount and p_amount": "{{lAmount}} 및 {{pAmount}} 공급",
+  "Transaction Submitted": "거래가 제출되었습니다.",
+  "View on chain Explorer": "{{chain}} 탐색기에서 보기",
+  "Close": "닫다",
+  "Add l_amount and p_amount": "{{lAmount}} 및 {{pAmount}} 추가",
+  "Pending": "처리",
+  "Recent Transactions": "최근 거래",
+  "Connected with Wallet": "{{name}}님과 연결됨",
+  "Your transactions will appear here": "거래 내역이 여기에 표시됩니다...",
+  "Clear All": "모두 지우기",
+  "Copy Address": "주소 복사",
+  "Change": "변화",
+  "Select Token Tips": "이름이나 기호를 검색하거나 아래에 주소를 붙여넣어 토큰을 찾으세요.",
+  "Browse lists": "목록 찾아보기",
+  "Swap Confirm Tips": "생산량이 추정됩니다. \n최소한 <b>{{token}}</b>을 받게 되며 그렇지 않으면 거래가 취소됩니다."
 }

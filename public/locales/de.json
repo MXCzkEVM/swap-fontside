@@ -183,5 +183,20 @@
   "Transaction slippage tips": "Die Leistung wird geschätzt. \nWenn sich der Preis um mehr als {{slippage}} ändert, wird Ihre Transaktion rückgängig gemacht.",
   "lp_token Pool Tokens": "{{token}} Pool-Token",
   "Symbol Deposited": "{{symbol}} Eingezahlt",
-  "Rates": "Preise"
+  "Rates": "Preise",
+  "Supplying l_amount and p_amount": "Bereitstellung von {{lAmount}} und {{pAmount}}",
+  "Transaction Submitted": "Transaktion übermittelt",
+  "View on chain Explorer": "Im {{chain}} Explorer ansehen",
+  "Close": "Schließen",
+  "Add l_amount and p_amount": "Addiere {{lAmount}} und {{pAmount}}",
+  "Pending": "Ausstehend",
+  "Recent Transactions": "kürzliche Transaktionen",
+  "Connected with Wallet": "Verbunden mit {{name}}",
+  "Your transactions will appear here": "Ihre Transaktionen werden hier angezeigt...",
+  "Clear All": "Alles löschen",
+  "Copy Address": "Adresse kopieren",
+  "Change": "Ändern",
+  "Select Token Tips": "Suchen Sie nach einem Token, indem Sie nach seinem Namen oder Symbol suchen oder unten seine Adresse einfügen.",
+  "Browse lists": "Listen durchsuchen",
+  "Swap Confirm Tips": "Die Leistung wird geschätzt. \nSie erhalten mindestens <b>{{token}}</b>, sonst wird die Transaktion rückgängig gemacht."
 }

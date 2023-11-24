@@ -183,5 +183,20 @@
   "Transaction slippage tips": "Sản lượng được ước tính. \nNếu giá thay đổi nhiều hơn {{slippage}} thì giao dịch của bạn sẽ hoàn nguyên.",
   "lp_token Pool Tokens": "{{token}} Mã thông báo nhóm",
   "Symbol Deposited": "{{biểu tượng}} đã được gửi",
-  "Rates": "Giá"
+  "Rates": "Giá",
+  "Supplying l_amount and p_amount": "Cung cấp {{lAmount}} và {{pAmount}}",
+  "Transaction Submitted": "Giao dịch đã gửi",
+  "View on chain Explorer": "Xem trên {{chain}} Explorer",
+  "Close": "Đóng",
+  "Add l_amount and p_amount": "Thêm {{lAmount}} và {{pAmount}}",
+  "Pending": "Xử lý",
+  "Recent Transactions": "Giao dịch gần đây",
+  "Connected with Wallet": "Đã kết nối với {{name}}",
+  "Your transactions will appear here": "Giao dịch của bạn sẽ xuất hiện ở đây...",
+  "Clear All": "Làm sạch tất cả",
+  "Copy Address": "Sao chép địa chỉ",
+  "Change": "Thay đổi",
+  "Select Token Tips": "Tìm mã thông báo bằng cách tìm kiếm tên hoặc ký hiệu của nó hoặc bằng cách dán địa chỉ của nó bên dưới.",
+  "Browse lists": "Duyệt danh sách",
+  "Swap Confirm Tips": "Sản lượng được ước tính. \nBạn sẽ nhận được ít nhất <b>{{token}</b> nếu không giao dịch sẽ hoàn nguyên."
 }

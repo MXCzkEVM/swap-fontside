@@ -183,5 +183,20 @@
   "Transaction slippage tips": "A produção é estimada. \nSe o preço mudar em mais de {{slippage}} sua transação será revertida.",
   "lp_token Pool Tokens": "{{token}} tokens de pool",
   "Symbol Deposited": "{{símbolo}} Depositado",
-  "Rates": "Cotações"
+  "Rates": "Cotações",
+  "Supplying l_amount and p_amount": "Fornecendo {{lAmount}} e {{pAmount}}",
+  "Transaction Submitted": "Transação enviada",
+  "View on chain Explorer": "Visualizar no {{chain}} Explorer",
+  "Close": "Fechar",
+  "Add l_amount and p_amount": "Adicione {{lAmount}} e {{pAmount}}",
+  "Pending": "Pendente",
+  "Recent Transactions": "Transações recentes",
+  "Connected with Wallet": "Conectado com {{nome}}",
+  "Your transactions will appear here": "Suas transações aparecerão aqui...",
+  "Clear All": "Limpar tudo",
+  "Copy Address": "Copiar endereço",
+  "Change": "Mudar",
+  "Select Token Tips": "Encontre um token pesquisando seu nome ou símbolo ou colando seu endereço abaixo.",
+  "Browse lists": "Navegar nas listas",
+  "Swap Confirm Tips": "A produção é estimada. \nVocê receberá pelo menos <b>{{token}}</b> ou a transação será revertida."
 }

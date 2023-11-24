@@ -183,5 +183,20 @@
   "Transaction slippage tips": "Output diperkirakan. \nJika harga berubah lebih dari {{slippage}} transaksi Anda akan dikembalikan.",
   "lp_token Pool Tokens": "{{token}} Token Kumpulan",
   "Symbol Deposited": "{{symbol}} Disimpan",
-  "Rates": "Tarif"
+  "Rates": "Tarif",
+  "Supplying l_amount and p_amount": "Memasok {{lAmount}} dan {{pAmount}}",
+  "Transaction Submitted": "Transaksi Dikirim",
+  "View on chain Explorer": "Lihat di {{chain}} Penjelajah",
+  "Close": "Menutup",
+  "Add l_amount and p_amount": "Tambahkan {{lAmount}} dan {{pAmount}}",
+  "Pending": "Tertunda",
+  "Recent Transactions": "transaksi terkini",
+  "Connected with Wallet": "Terhubung dengan {{nama}}",
+  "Your transactions will appear here": "Transaksi Anda akan muncul di sini...",
+  "Clear All": "Bersihkan semua",
+  "Copy Address": "Salin Alamat",
+  "Change": "Mengubah",
+  "Select Token Tips": "Temukan token dengan mencari nama atau simbolnya atau dengan menempelkan alamatnya di bawah.",
+  "Browse lists": "Telusuri daftar",
+  "Swap Confirm Tips": "Output diperkirakan. \nAnda akan menerima setidaknya <b>{{token}}</b> atau transaksi akan dikembalikan."
 }

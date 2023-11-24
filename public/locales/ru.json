@@ -183,5 +183,20 @@
   "Transaction slippage tips": "Выход оценивается. \nЕсли цена изменится более чем на {{slippage}}, ваша транзакция будет отменена.",
   "lp_token Pool Tokens": "{{token}} Токены пула",
   "Symbol Deposited": "{{symbol}} Депонировано",
-  "Rates": "Ставки"
+  "Rates": "Ставки",
+  "Supplying l_amount and p_amount": "Поставка {{lAmount}} и {{pAmount}}",
+  "Transaction Submitted": "Транзакция отправлена",
+  "View on chain Explorer": "Посмотреть в браузере {{chain}}",
+  "Close": "Закрывать",
+  "Add l_amount and p_amount": "Добавьте {{lAmount}} и {{pAmount}}",
+  "Pending": "Обработка",
+  "Recent Transactions": "Недавние транзакции",
+  "Connected with Wallet": "Связано с {{name}}",
+  "Your transactions will appear here": "Ваши транзакции появятся здесь...",
+  "Clear All": "Очистить все",
+  "Copy Address": "Копировать адрес",
+  "Change": "Изменять",
+  "Select Token Tips": "Найдите токен, выполнив поиск по его названию или символу или вставив его адрес ниже.",
+  "Browse lists": "Просмотр списков",
+  "Swap Confirm Tips": "Выход оценивается. \nВы получите как минимум <b>{{token}}</b>, иначе транзакция будет отменена."
 }

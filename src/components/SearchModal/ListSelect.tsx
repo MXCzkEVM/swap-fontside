@@ -24,6 +24,7 @@ import ListLogo from '../ListLogo'
 import QuestionHelper from '../QuestionHelper'
 import Row, { RowBetween } from '../Row'
 import { PaddedColumn, SearchInput, Separator, SeparatorDark } from './styleds'
+import { useTranslation } from 'react-i18next'
 
 const UnpaddedLinkStyledButton = styled(LinkStyledButton)`
   padding: 0;
@@ -249,6 +250,7 @@ const ListContainer = styled.div`
 `
 
 export function ListSelect({ onDismiss, onBack }: { onDismiss: () => void; onBack: () => void }) {
+  const { t } = useTranslation()
   const [listUrlInput, setListUrlInput] = useState<string>('')
 
   const dispatch = useDispatch<AppDispatch>()
@@ -372,7 +374,7 @@ export function ListSelect({ onDismiss, onBack }: { onDismiss: () => void; onBac
       <Separator />
 
       <div style={{ padding: '16px', textAlign: 'center' }}>
-        <ExternalLink href="https://tokenlists.org">Browse lists</ExternalLink>
+        <ExternalLink href="https://tokenlists.org">{t('Browse lists')}</ExternalLink>
       </div>
     </Column>
   )

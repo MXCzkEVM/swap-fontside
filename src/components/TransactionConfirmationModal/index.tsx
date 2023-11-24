@@ -79,6 +79,7 @@ function TransactionSubmittedContent({
   chainId: ChainId
 }) {
   const theme = useContext(ThemeContext)
+  const { t } = useTranslation()
 
   return (
     <Wrapper>
@@ -92,19 +93,19 @@ function TransactionSubmittedContent({
         </ConfirmedIcon>
         <AutoColumn gap="12px" justify={'center'}>
           <Text fontWeight={500} fontSize={20}>
-            Transaction Submitted
+            {t('Transaction Submitted')}
           </Text>
 
           {chainId && hash && (
             <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')}>
               <Text fontWeight={500} fontSize={14} color={theme.primary1}>
-                View on {chainName} Explorer
+                {t('View on chain Explorer', { chain: chainName })}
               </Text>
             </ExternalLink>
           )}
           <ButtonPrimary onClick={onDismiss} style={{ margin: '20px 0 0 0' }}>
             <Text fontWeight={500} fontSize={20}>
-              Close
+              {t('Close')}
             </Text>
           </ButtonPrimary>
         </AutoColumn>

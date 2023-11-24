@@ -183,5 +183,20 @@
   "Transaction slippage tips": "De output wordt geschat. \nAls de prijs met meer dan {{slippage}} verandert, wordt uw transactie teruggedraaid.",
   "lp_token Pool Tokens": "{{token}} Pooltokens",
   "Symbol Deposited": "{{symbol}} Gestort",
-  "Rates": "Tarieven"
+  "Rates": "Tarieven",
+  "Supplying l_amount and p_amount": "Het leveren van {{lAmount}} en {{pAmount}}",
+  "Transaction Submitted": "Transactie verzonden",
+  "View on chain Explorer": "Bekijk op {{chain}} Explorer",
+  "Close": "Dichtbij",
+  "Add l_amount and p_amount": "Voeg {{lAmount}} en {{pAmount}} toe",
+  "Pending": "Verwerken",
+  "Recent Transactions": "recente transacties",
+  "Connected with Wallet": "Verbonden met {{naam}}",
+  "Your transactions will appear here": "Uw transacties verschijnen hier...",
+  "Clear All": "Wis alles",
+  "Copy Address": "Kopieer adres",
+  "Change": "Wijziging",
+  "Select Token Tips": "Vind een token door naar de naam of het symbool te zoeken of door het adres hieronder te plakken.",
+  "Browse lists": "Blader door lijsten",
+  "Swap Confirm Tips": "De output wordt geschat. \nJe ontvangt minimaal <b>{{token}}</b>, anders wordt de transactie teruggedraaid."
 }

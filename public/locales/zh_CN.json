@@ -183,5 +183,20 @@
   "Transaction slippage tips": "输出是估计的。\n如果价格变化超过 {{slippage}}，您的交易将恢复。",
   "lp_token Pool Tokens": "{{token}} 池代币",
   "Symbol Deposited": "{{symbol}} 存入",
-  "Rates": "价格"
+  "Rates": "价格",
+  "Supplying l_amount and p_amount": "提供 {{lAmount}} 和 {{pAmount}}",
+  "Transaction Submitted": "交易已提交",
+  "View on chain Explorer": "在 {{chain}} 浏览器上查看",
+  "Close": "关闭",
+  "Add l_amount and p_amount": "添加 {{lAmount}} 和 {{pAmount}}",
+  "Pending": "处理中",
+  "Recent Transactions": "最近交易",
+  "Connected with Wallet": "已与 {{name}} 连接",
+  "Your transactions will appear here": "您的交易将出现在这里...",
+  "Clear All": "全部清除",
+  "Copy Address": "复制地址",
+  "Change": "改变",
+  "Select Token Tips": "通过搜索其名称或符号或在下面粘贴其地址来查找令牌。",
+  "Browse lists": "浏览列表",
+  "Swap Confirm Tips": "输出是估计的。\n您将至少收到<b>{{token}}</b>，否则交易将恢复。"
 }

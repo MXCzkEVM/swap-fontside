@@ -183,5 +183,20 @@
   "Transaction slippage tips": "Ieșirea este estimată. \nDacă prețul se modifică cu mai mult de {{slippage}}, tranzacția dvs. se va reveni.",
   "lp_token Pool Tokens": "{{token}} Jetoane de grup",
   "Symbol Deposited": "{{simbol}} Depus",
-  "Rates": "Tarife"
+  "Rates": "Tarife",
+  "Supplying l_amount and p_amount": "Furnizare de {{lAmount}} și {{pAmount}}",
+  "Transaction Submitted": "Tranzacție trimisă",
+  "View on chain Explorer": "Vizualizați în {{chain}} Explorer",
+  "Close": "Închide",
+  "Add l_amount and p_amount": "Adăugați {{lAmount}} și {{pAmount}}",
+  "Pending": "Prelucrare",
+  "Recent Transactions": "tranzactii recente",
+  "Connected with Wallet": "Conectat cu {{name}}",
+  "Your transactions will appear here": "Tranzacțiile dvs. vor apărea aici...",
+  "Clear All": "Curata tot",
+  "Copy Address": "Copiați adresa",
+  "Change": "Schimbare",
+  "Select Token Tips": "Găsiți un simbol căutând numele sau simbolul sau lipindu-i adresa mai jos.",
+  "Browse lists": "Răsfoiți liste",
+  "Swap Confirm Tips": "Ieșirea este estimată. \nVeți primi cel puțin <b>{{token}}</b> sau tranzacția va reveni."
 }

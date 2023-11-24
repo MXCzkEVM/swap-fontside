@@ -183,5 +183,20 @@
   "Transaction slippage tips": "Çıktı tahmin ediliyor. \nFiyatın {{slippage}} oranından fazla değişmesi durumunda işleminiz geri alınacaktır.",
   "lp_token Pool Tokens": "{{token}} Havuz Jetonları",
   "Symbol Deposited": "{{symbol}} Yatırıldı",
-  "Rates": "Oranlar"
+  "Rates": "Oranlar",
+  "Supplying l_amount and p_amount": "{{lAmount}} ve {{pAmount}} sağlanıyor",
+  "Transaction Submitted": "İşlem Gönderildi",
+  "View on chain Explorer": "{{chain}} Explorer'da görüntüle",
+  "Close": "Kapalı",
+  "Add l_amount and p_amount": "{{lAmount}} ve {{pAmount}} ekleyin",
+  "Pending": "İşleme",
+  "Recent Transactions": "Son İşlemler",
+  "Connected with Wallet": "{{name}} ile bağlantı kuruldu",
+  "Your transactions will appear here": "İşlemleriniz burada görünecek...",
+  "Clear All": "Hepsini temizle",
+  "Copy Address": "Adresi kopyala",
+  "Change": "Değiştirmek",
+  "Select Token Tips": "Adını veya sembolünü arayarak veya adresini aşağıya yapıştırarak bir jeton bulun.",
+  "Browse lists": "Listelere göz atın",
+  "Swap Confirm Tips": "Çıktı tahmin ediliyor. \nEn az <b>{{token}</b> alacaksınız, aksi takdirde işlem geri dönecektir."
 }

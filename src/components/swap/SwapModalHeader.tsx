@@ -12,6 +12,7 @@ import { AutoColumn } from '../Column'
 import CurrencyLogo from '../CurrencyLogo'
 import { RowBetween, RowFixed } from '../Row'
 import { TruncatedText, SwapShowAcceptChanges } from './styleds'
+import { useTranslation, Translation } from 'react-i18next'
 
 export default function SwapModalHeader({
   trade,
@@ -30,6 +31,7 @@ export default function SwapModalHeader({
     trade,
     allowedSlippage
   ])
+  const { t } = useTranslation()
   const { priceImpactWithoutFee } = useMemo(() => computeTradePriceBreakdown(trade), [trade])
   const priceImpactSeverity = warningSeverity(priceImpactWithoutFee)
 
@@ -99,11 +101,15 @@ export default function SwapModalHeader({
       <AutoColumn justify="flex-start" gap="sm" style={{ padding: '12px 0 0 0px' }}>
         {trade.tradeType === TradeType.EXACT_INPUT ? (
           <TYPE.italic textAlign="left" style={{ width: '100%' }}>
-            {`Output is estimated. You will receive at least `}
-            <b>
-              {slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(6)} {trade.outputAmount.currency.symbol}
-            </b>
-            {' or the transaction will revert.'}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t('Swap Confirm Tips', {
+                  token: `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(6)} ${
+                    trade.outputAmount.currency.symbol
+                  }`
+                })
+              }}
+            />
           </TYPE.italic>
         ) : (
           <TYPE.italic textAlign="left" style={{ width: '100%' }}>

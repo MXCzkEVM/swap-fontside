@@ -6,6 +6,7 @@ import { ExternalLink, TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 import { RowBetween } from '../Row'
 import { getEtherscanLink } from '../../utils'
+import { useTranslation } from 'react-i18next'
 const chainName = process.env.REACT_APP_CHAIN_NAME
 
 const InputPanel = styled.div`
@@ -92,6 +93,7 @@ export default function AddressInputPanel({
   )
 
   const error = Boolean(value.length > 0 && !loading && !address)
+  const { t } = useTranslation()
 
   return (
     <InputPanel id={id}>
@@ -104,7 +106,7 @@ export default function AddressInputPanel({
               </TYPE.black>
               {address && chainId && (
                 <ExternalLink href={getEtherscanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
-                  (View on {chainName} Explorer)
+                  ({t('View on chain Explorer', { chain: chainName })})
                 </ExternalLink>
               )}
             </RowBetween>

@@ -183,5 +183,20 @@
   "lp_token Pool Tokens": "{{token}} Pool Tokens",
   "Deposited": "",
   "Symbol Deposited": "{{symbol}} Deposited",
-  "Rates": "Rates"
+  "Rates": "Rates",
+  "Supplying l_amount and p_amount": "Supplying {{lAmount}} and {{pAmount}}",
+  "Transaction Submitted": "Transaction Submitted",
+  "View on chain Explorer": "View on {{chain}} Explorer",
+  "Close": "Close",
+  "Add l_amount and p_amount": "Add {{lAmount}} and {{pAmount}}",
+  "Pending": "Pending",
+  "Recent Transactions": "Recent Transactions",
+  "Connected with Wallet": "Connected with {{name}}",
+  "Your transactions will appear here": "Your transactions will appear here...",
+  "Clear All": "Clear All",
+  "Copy Address": "Copy Address",
+  "Change": "Change",
+  "Select Token Tips": "Find a token by searching for its name or symbol or by pasting its address below.",
+  "Browse lists": "Browse lists",
+  "Swap Confirm Tips": "Output is estimated. You will receive at least <b>{{token}}</b>  or the transaction will revert."
 }
