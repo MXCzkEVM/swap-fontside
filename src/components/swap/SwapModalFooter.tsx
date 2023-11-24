@@ -71,7 +71,7 @@ export default function SwapModalFooter({
         <RowBetween>
           <RowFixed>
             <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-              {trade.tradeType === TradeType.EXACT_INPUT ? 'Minimum received' : 'Maximum sold'}
+              {trade.tradeType === TradeType.EXACT_INPUT ? t('Minimum received') : t('Maximum sold')}
             </TYPE.black>
             <QuestionHelper text={t('Your transaction will revert')} />
           </RowFixed>
@@ -91,7 +91,7 @@ export default function SwapModalFooter({
         <RowBetween>
           <RowFixed>
             <TYPE.black color={theme.text2} fontSize={14} fontWeight={400}>
-              Price Impact
+              {t('Price Impact')}
             </TYPE.black>
             <QuestionHelper text={t('The difference between the market')} />
           </RowFixed>
