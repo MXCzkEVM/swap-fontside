@@ -376,7 +376,7 @@ export default function AddLiquidity({
                 <GreyCard padding="0px" borderRadius={'20px'}>
                   <RowBetween padding="1rem">
                     <TYPE.subHeader fontWeight={500} fontSize={14}>
-                      {noLiquidity ? t('Initial prices') : t('Prices')} and pool share
+                      {noLiquidity ? t('Initial prices') : t('Prices and pool share')}
                     </TYPE.subHeader>
                   </RowBetween>{' '}
                   <LightCard padding="1rem" borderRadius={'20px'}>
