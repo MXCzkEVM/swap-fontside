@@ -176,5 +176,12 @@
   "Supply": "供給",
   "Connect to a wallet": "ウォレットに接続する",
   "Learn more about wallets": "ウォレットについて詳しく見る",
-  "New to Ethereum": "イーサリアムは初めてですか?"
+  "New to Ethereum": "イーサリアムは初めてですか?",
+  "Waiting For Confirmation": "確認を待ちます",
+  "Confirm this transaction in your wallet": "ウォレットでこの取引を確認してください",
+  "Swapping trade for output": "{{trade}} を {{output}} に交換します",
+  "Transaction slippage tips": "出力は推定です。\n価格が {{slippage}} を超えて変化した場合、トランザクションは元に戻ります。",
+  "lp_token Pool Tokens": "{{token}} プールトークン",
+  "Symbol Deposited": "{{symbol}} が入金されました",
+  "Rates": "料金"
 }

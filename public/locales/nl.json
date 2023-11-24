@@ -176,5 +176,12 @@
   "Supply": "Levering",
   "Connect to a wallet": "Maak verbinding met een portemonnee",
   "Learn more about wallets": "Meer informatie over portemonnees",
-  "New to Ethereum": "Nieuw bij Ethereum?"
+  "New to Ethereum": "Nieuw bij Ethereum?",
+  "Waiting For Confirmation": "Op bevestiging wachten",
+  "Confirm this transaction in your wallet": "Bevestig deze transactie in uw portemonnee",
+  "Swapping trade for output": "{{trade}} ruilen voor {{output}}",
+  "Transaction slippage tips": "De output wordt geschat. \nAls de prijs met meer dan {{slippage}} verandert, wordt uw transactie teruggedraaid.",
+  "lp_token Pool Tokens": "{{token}} Pooltokens",
+  "Symbol Deposited": "{{symbol}} Gestort",
+  "Rates": "Tarieven"
 }

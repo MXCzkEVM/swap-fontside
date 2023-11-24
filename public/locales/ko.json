@@ -176,5 +176,12 @@
   "Supply": "공급",
   "Connect to a wallet": "지갑에 연결",
   "Learn more about wallets": "지갑에 대해 자세히 알아보기",
-  "New to Ethereum": "이더리움을 처음 사용하시나요?"
+  "New to Ethereum": "이더리움을 처음 사용하시나요?",
+  "Waiting For Confirmation": "확인을 기다리는 중",
+  "Confirm this transaction in your wallet": "지갑에서 이 거래를 확인하세요",
+  "Swapping trade for output": "{{output}}에 대한 {{trade}} 교환",
+  "Transaction slippage tips": "생산량이 추정됩니다. \n가격이 {{slippage}} 이상 변경되면 거래가 취소됩니다.",
+  "lp_token Pool Tokens": "{{token}} 풀 토큰",
+  "Symbol Deposited": "{{symbol}} 입금됨",
+  "Rates": "요금"
 }

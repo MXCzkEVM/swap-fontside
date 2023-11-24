@@ -175,5 +175,13 @@
   "Supply": "Supply",
   "Connect to a wallet": "Connect to a wallet",
   "Learn more about wallets": "Learn more about wallets",
-  "New to Ethereum": "New to Ethereum?"
+  "New to Ethereum": "New to Ethereum?",
+  "Waiting For Confirmation": "Waiting For Confirmation",
+  "Confirm this transaction in your wallet": "Confirm this transaction in your wallet",
+  "Swapping trade for output": "Swapping {{trade}} for {{output}}",
+  "Transaction slippage tips": "Output is estimated. If the price changes by more than {{slippage}} your transaction will revert.",
+  "lp_token Pool Tokens": "{{token}} Pool Tokens",
+  "Deposited": "",
+  "Symbol Deposited": "{{symbol}} Deposited",
+  "Rates": "Rates"
 }

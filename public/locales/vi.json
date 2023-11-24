@@ -176,5 +176,12 @@
   "Supply": "Cung cấp",
   "Connect to a wallet": "Kết nối với ví",
   "Learn more about wallets": "Tìm hiểu thêm về ví",
-  "New to Ethereum": "Bạn mới sử dụng Ethereum?"
+  "New to Ethereum": "Bạn mới sử dụng Ethereum?",
+  "Waiting For Confirmation": "Chờ đợi sự xác nhận",
+  "Confirm this transaction in your wallet": "Xác nhận giao dịch này trong ví của bạn",
+  "Swapping trade for output": "Hoán đổi {{trade}} lấy {{output}}",
+  "Transaction slippage tips": "Sản lượng được ước tính. \nNếu giá thay đổi nhiều hơn {{slippage}} thì giao dịch của bạn sẽ hoàn nguyên.",
+  "lp_token Pool Tokens": "{{token}} Mã thông báo nhóm",
+  "Symbol Deposited": "{{biểu tượng}} đã được gửi",
+  "Rates": "Giá"
 }

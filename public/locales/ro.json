@@ -176,5 +176,12 @@
   "Supply": "Livra",
   "Connect to a wallet": "Conectați-vă la un portofel",
   "Learn more about wallets": "Aflați mai multe despre portofele",
-  "New to Ethereum": "Nou pe Ethereum?"
+  "New to Ethereum": "Nou pe Ethereum?",
+  "Waiting For Confirmation": "În așteptarea confirmării",
+  "Confirm this transaction in your wallet": "Confirmați această tranzacție în portofel",
+  "Swapping trade for output": "Schimbând {{trade}} cu {{output}}",
+  "Transaction slippage tips": "Ieșirea este estimată. \nDacă prețul se modifică cu mai mult de {{slippage}}, tranzacția dvs. se va reveni.",
+  "lp_token Pool Tokens": "{{token}} Jetoane de grup",
+  "Symbol Deposited": "{{simbol}} Depus",
+  "Rates": "Tarife"
 }

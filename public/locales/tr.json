@@ -176,5 +176,12 @@
   "Supply": "Tedarik",
   "Connect to a wallet": "Bir cüzdana bağlanın",
   "Learn more about wallets": "Cüzdanlar hakkında daha fazla bilgi edinin",
-  "New to Ethereum": "Ethereum'da yeni misiniz?"
+  "New to Ethereum": "Ethereum'da yeni misiniz?",
+  "Waiting For Confirmation": "Onay bekliyor",
+  "Confirm this transaction in your wallet": "Bu işlemi cüzdanınızda onaylayın",
+  "Swapping trade for output": "{{trade}}'yi {{output}} ile değiştiriyoruz",
+  "Transaction slippage tips": "Çıktı tahmin ediliyor. \nFiyatın {{slippage}} oranından fazla değişmesi durumunda işleminiz geri alınacaktır.",
+  "lp_token Pool Tokens": "{{token}} Havuz Jetonları",
+  "Symbol Deposited": "{{symbol}} Yatırıldı",
+  "Rates": "Oranlar"
 }

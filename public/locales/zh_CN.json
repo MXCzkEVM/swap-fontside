@@ -176,5 +176,12 @@
   "Supply": "供应",
   "Connect to a wallet": "连接钱包",
   "Learn more about wallets": "了解更多钱包的信息",
-  "New to Ethereum": "Ethereum 新手？"
+  "New to Ethereum": "Ethereum 新手？",
+  "Waiting For Confirmation": "等待确认中",
+  "Confirm this transaction in your wallet": "在您的钱包中确认此交易",
+  "Swapping trade for output": "将 {{trade}} 交换为 {{output}}",
+  "Transaction slippage tips": "输出是估计的。\n如果价格变化超过 {{slippage}}，您的交易将恢复。",
+  "lp_token Pool Tokens": "{{token}} 池代币",
+  "Symbol Deposited": "{{symbol}} 存入",
+  "Rates": "价格"
 }

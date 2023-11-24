@@ -176,5 +176,12 @@
   "Supply": "Поставлять",
   "Connect to a wallet": "Подключитесь к кошельку",
   "Learn more about wallets": "Узнайте больше о кошельках",
-  "New to Ethereum": "Впервые в Эфириуме?"
+  "New to Ethereum": "Впервые в Эфириуме?",
+  "Waiting For Confirmation": "Ожидание подтверждения",
+  "Confirm this transaction in your wallet": "Подтвердите эту транзакцию в своем кошельке",
+  "Swapping trade for output": "Обмен {{trade}} на {{output}}",
+  "Transaction slippage tips": "Выход оценивается. \nЕсли цена изменится более чем на {{slippage}}, ваша транзакция будет отменена.",
+  "lp_token Pool Tokens": "{{token}} Токены пула",
+  "Symbol Deposited": "{{symbol}} Депонировано",
+  "Rates": "Ставки"
 }

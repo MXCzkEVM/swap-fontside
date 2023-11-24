@@ -176,5 +176,12 @@
   "Supply": "Fournir",
   "Connect to a wallet": "Connectez-vous à un portefeuille",
   "Learn more about wallets": "En savoir plus sur les portefeuilles",
-  "New to Ethereum": "Vous êtes nouveau sur Ethereum ?"
+  "New to Ethereum": "Vous êtes nouveau sur Ethereum ?",
+  "Waiting For Confirmation": "En attente de confirmation",
+  "Confirm this transaction in your wallet": "Confirmez cette transaction dans votre portefeuille",
+  "Swapping trade for output": "Échange de {{trade}} contre {{output}}",
+  "Transaction slippage tips": "La production est estimée. \nSi le prix change de plus de {{slippage}}, votre transaction sera annulée.",
+  "lp_token Pool Tokens": "{{token}} jetons de pool",
+  "Symbol Deposited": "{{symbole}} Déposé",
+  "Rates": "Les taux"
 }
