@@ -172,5 +172,6 @@
   "Insufficient": "不足",
   "Prices and pool share": "料金とプールシェア",
   "seePer": "{{from}} 毎 {{to}}",
-  "Your position": "あなたの流動性プール"
+  "Your position": "あなたの流動性プール",
+  "Supply": "供給"
 }

@@ -172,5 +172,6 @@
   "Insufficient": "不足",
   "Prices and pool share": "价格和池份额",
   "seePer": "{{from}}每{{to}}",
-  "Your position": "流动池"
+  "Your position": "流动池",
+  "Supply": "供应"
 }
