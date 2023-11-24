@@ -198,5 +198,6 @@
   "Change": "変化",
   "Select Token Tips": "名前またはシンボルを検索するか、下にアドレスを貼り付けて、トークンを見つけます。",
   "Browse lists": "リストを参照する",
-  "Swap Confirm Tips": "出力は推定です。\n少なくとも <b>{{token}}</b> を受け取ることになります。そうでない場合、トランザクションは元に戻ります。"
+  "These tokens are commonly paired with other tokens": "これらのトークンは通常、他のトークンとペアになります。",
+  "Swap Input Confirm Tips": "出力は推定です。\n少なくとも <b>{{token}}</b> を受け取ることになります。そうでない場合、トランザクションは元に戻ります。"
 }

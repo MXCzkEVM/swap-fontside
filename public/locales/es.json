@@ -198,5 +198,6 @@
   "Change": "Cambiar",
   "Select Token Tips": "Encuentre un token buscando su nombre o símbolo o pegando su dirección a continuación.",
   "Browse lists": "Explorar listas",
-  "Swap Confirm Tips": "Se estima la producción. \nRecibirá al menos <b>{{token}}</b> o la transacción se revertirá."
+  "These tokens are commonly paired with other tokens": "Estos tokens suelen combinarse con otros tokens.",
+  "Swap Input Confirm Tips": "Se estima la producción. \nRecibirá al menos <b>{{token}}</b> o la transacción se revertirá."
 }

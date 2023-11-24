@@ -198,5 +198,7 @@
   "Change": "Change",
   "Select Token Tips": "Find a token by searching for its name or symbol or by pasting its address below.",
   "Browse lists": "Browse lists",
-  "Swap Confirm Tips": "Output is estimated. You will receive at least <b>{{token}}</b>  or the transaction will revert."
+  "These tokens are commonly paired with other tokens": "These tokens are commonly paired with other tokens.",
+  "Swap Input Confirm Tips": "Output is estimated. You will receive at least <b>{{token}}</b>  or the transaction will revert.",
+  "Swap Output Confirm Tips": "Input is estimated. You will sell at most <b>{{token}}</b>  or the transaction will revert."
 }

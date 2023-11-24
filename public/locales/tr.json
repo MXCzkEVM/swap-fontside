@@ -198,5 +198,6 @@
   "Change": "Değiştirmek",
   "Select Token Tips": "Adını veya sembolünü arayarak veya adresini aşağıya yapıştırarak bir jeton bulun.",
   "Browse lists": "Listelere göz atın",
-  "Swap Confirm Tips": "Çıktı tahmin ediliyor. \nEn az <b>{{token}</b> alacaksınız, aksi takdirde işlem geri dönecektir."
+  "These tokens are commonly paired with other tokens": "Bu tokenlar genellikle diğer tokenlarla eşleştirilir.",
+  "Swap Input Confirm Tips": "Çıktı tahmin ediliyor. \nEn az <b>{{token}</b> alacaksınız, aksi takdirde işlem geri dönecektir."
 }

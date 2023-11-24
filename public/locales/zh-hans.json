@@ -198,5 +198,6 @@
   "Change": "改变",
   "Select Token Tips": "通过搜索其名称或符号或在下面粘贴其地址来查找令牌。",
   "Browse lists": "浏览列表",
-  "Swap Confirm Tips": "输出是估计的。\n您将至少收到<b>{{token}}</b>，否则交易将恢复。"
+  "These tokens are commonly paired with other tokens": "这些代币通常与其他代币配对。",
+  "Swap Input Confirm Tips": "输出是估计的。\n您将至少收到<b>{{token}}</b>，否则交易将恢复。"
 }

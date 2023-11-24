@@ -198,5 +198,6 @@
   "Change": "Ändern",
   "Select Token Tips": "Suchen Sie nach einem Token, indem Sie nach seinem Namen oder Symbol suchen oder unten seine Adresse einfügen.",
   "Browse lists": "Listen durchsuchen",
-  "Swap Confirm Tips": "Die Leistung wird geschätzt. \nSie erhalten mindestens <b>{{token}}</b>, sonst wird die Transaktion rückgängig gemacht."
+  "These tokens are commonly paired with other tokens": "Diese Token werden üblicherweise mit anderen Token gepaart.",
+  "Swap Input Confirm Tips": "Die Leistung wird geschätzt. \nSie erhalten mindestens <b>{{token}}</b>, sonst wird die Transaktion rückgängig gemacht."
 }

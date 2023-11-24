@@ -103,7 +103,7 @@ export default function SwapModalHeader({
           <TYPE.italic textAlign="left" style={{ width: '100%' }}>
             <span
               dangerouslySetInnerHTML={{
-                __html: t('Swap Confirm Tips', {
+                __html: t('Swap Input Confirm Tips', {
                   token: `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(6)} ${
                     trade.outputAmount.currency.symbol
                   }`
@@ -113,11 +113,15 @@ export default function SwapModalHeader({
           </TYPE.italic>
         ) : (
           <TYPE.italic textAlign="left" style={{ width: '100%' }}>
-            {`Input is estimated. You will sell at most `}
-            <b>
-              {slippageAdjustedAmounts[Field.INPUT]?.toSignificant(6)} {trade.inputAmount.currency.symbol}
-            </b>
-            {' or the transaction will revert.'}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t('Swap Output Confirm Tips', {
+                  token: `${slippageAdjustedAmounts[Field.INPUT]?.toSignificant(6)} ${
+                    trade.inputAmount.currency.symbol
+                  }`
+                })
+              }}
+            />
           </TYPE.italic>
         )}
       </AutoColumn>
