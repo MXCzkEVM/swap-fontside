@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "Kekurangan likuiditas untuk perdagangan ini.",
   "Insufficient": "Kurang cukup",
   "Prices and pool share": "Harga dan pembagian kolam renang",
-  "seePer": "{{from}} untuk {{to}}"
+  "seePer": "{{from}} untuk {{to}}",
+  "Your position": "Posisi kamu"
 }

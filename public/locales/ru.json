@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "Недостаточная ликвидность для этой сделки.",
   "Insufficient": "Недостаточно",
   "Prices and pool share": "Цены и доля пула",
-  "seePer": "{{from}} за {{to}}"
+  "seePer": "{{from}} за {{to}}",
+  "Your position": "Твоя позиция"
 }

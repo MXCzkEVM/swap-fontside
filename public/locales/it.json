@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "Liquidità insufficiente per questa operazione.",
   "Insufficient": "Insufficiente",
   "Prices and pool share": "Prezzi e condivisione della piscina",
-  "seePer": "{{from}} al {{to}}"
+  "seePer": "{{from}} al {{to}}",
+  "Your position": "La tua posizione"
 }

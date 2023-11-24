@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "此交易流动性不足。",
   "Insufficient": "不足",
   "Prices and pool share": "价格和池份额",
-  "seePer": "{{from}}每{{to}}"
+  "seePer": "{{from}}每{{to}}",
+  "Your position": "流动池"
 }

@@ -171,5 +171,6 @@
   "Invalid recipient": "Người nhận không hợp lệ",
   "Insufficient liquidity for this trade": "Không đủ lưu thông cho giao dịch này.",
   "Insufficient": "Không đủ",
-  "Prices and pool share": "Giá cả và chia sẻ nhóm"
+  "Prices and pool share": "Giá cả và chia sẻ nhóm",
+  "Your position": "Vị trí của bạn"
 }

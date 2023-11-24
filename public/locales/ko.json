@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "이 거래에 대한 유동성이 부족합니다.",
   "Insufficient": "부족한",
   "Prices and pool share": "가격 및 수영장 점유율",
-  "seePer": "{{from}}당 {{to}}"
+  "seePer": "{{from}}당 {{to}}",
+  "Your position": "너의 위치"
 }

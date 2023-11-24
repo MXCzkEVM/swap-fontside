@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "Bu işlem için yetersiz likidite.",
   "Insufficient": "Yetersiz",
   "Prices and pool share": "Fiyatlar ve havuz payı",
-  "seePer": "{{to}} başına {{from}}"
+  "seePer": "{{to}} başına {{from}}",
+  "Your position": "Senin pozisyonun"
 }

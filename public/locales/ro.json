@@ -171,5 +171,6 @@
   "Insufficient liquidity for this trade": "Lichiditate insuficientă pentru această tranzacție.",
   "Insufficient": "Insuficient",
   "Prices and pool share": "Prețuri și cota de la piscină",
-  "seePer": "{{from}} per {{to}}"
+  "seePer": "{{from}} per {{to}}",
+  "Your position": "Pozitia ta"
 }
