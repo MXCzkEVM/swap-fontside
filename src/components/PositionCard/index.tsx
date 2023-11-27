@@ -93,7 +93,6 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
       )
     })
 
-    console.log(records)
     if (!records[0]) return
 
     return records[0]
