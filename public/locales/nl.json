@@ -199,5 +199,6 @@
   "Select Token Tips": "Vind een token door naar de naam of het symbool te zoeken of door het adres hieronder te plakken.",
   "Browse lists": "Blader door lijsten",
   "These tokens are commonly paired with other tokens": "Deze tokens worden vaak gecombineerd met andere tokens.",
-  "Swap Input Confirm Tips": "De output wordt geschat. \nJe ontvangt minimaal <b>{{token}}</b>, anders wordt de transactie teruggedraaid."
+  "Swap Input Confirm Tips": "De output wordt geschat. \nJe ontvangt minimaal <b>{{token}}</b>, anders wordt de transactie teruggedraaid.",
+  "Initial LP supply": "Eerste LP-levering"
 }

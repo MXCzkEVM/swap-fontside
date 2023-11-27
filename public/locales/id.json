@@ -199,5 +199,6 @@
   "Select Token Tips": "Temukan token dengan mencari nama atau simbolnya atau dengan menempelkan alamatnya di bawah.",
   "Browse lists": "Telusuri daftar",
   "These tokens are commonly paired with other tokens": "Token ini biasanya dipasangkan dengan token lainnya.",
-  "Swap Input Confirm Tips": "Output diperkirakan. \nAnda akan menerima setidaknya <b>{{token}}</b> atau transaksi akan dikembalikan."
+  "Swap Input Confirm Tips": "Output diperkirakan. \nAnda akan menerima setidaknya <b>{{token}}</b> atau transaksi akan dikembalikan.",
+  "Initial LP supply": "Pasokan LP awal"
 }

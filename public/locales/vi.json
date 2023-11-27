@@ -199,5 +199,6 @@
   "Select Token Tips": "Tìm mã thông báo bằng cách tìm kiếm tên hoặc ký hiệu của nó hoặc bằng cách dán địa chỉ của nó bên dưới.",
   "Browse lists": "Duyệt danh sách",
   "These tokens are commonly paired with other tokens": "Các mã thông báo này thường được ghép nối với các mã thông báo khác.",
-  "Swap Input Confirm Tips": "Sản lượng được ước tính. \nBạn sẽ nhận được ít nhất <b>{{token}</b> nếu không giao dịch sẽ hoàn nguyên."
+  "Swap Input Confirm Tips": "Sản lượng được ước tính. \nBạn sẽ nhận được ít nhất <b>{{token}</b> nếu không giao dịch sẽ hoàn nguyên.",
+  "Initial LP supply": "Nguồn cung cấp LP ban đầu"
 }

@@ -199,5 +199,6 @@
   "Select Token Tips": "이름이나 기호를 검색하거나 아래에 주소를 붙여넣어 토큰을 찾으세요.",
   "Browse lists": "목록 찾아보기",
   "These tokens are commonly paired with other tokens": "이러한 토큰은 일반적으로 다른 토큰과 쌍을 이룹니다.",
-  "Swap Input Confirm Tips": "생산량이 추정됩니다. \n최소한 <b>{{token}}</b>을 받게 되며 그렇지 않으면 거래가 취소됩니다."
+  "Swap Input Confirm Tips": "생산량이 추정됩니다. \n최소한 <b>{{token}}</b>을 받게 되며 그렇지 않으면 거래가 취소됩니다.",
+  "Initial LP supply": "초도 LP 공급"
 }

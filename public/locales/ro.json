@@ -199,5 +199,6 @@
   "Select Token Tips": "Găsiți un simbol căutând numele sau simbolul sau lipindu-i adresa mai jos.",
   "Browse lists": "Răsfoiți liste",
   "These tokens are commonly paired with other tokens": "Aceste jetoane sunt de obicei asociate cu alte jetoane.",
-  "Swap Input Confirm Tips": "Ieșirea este estimată. \nVeți primi cel puțin <b>{{token}}</b> sau tranzacția va reveni."
+  "Swap Input Confirm Tips": "Ieșirea este estimată. \nVeți primi cel puțin <b>{{token}}</b> sau tranzacția va reveni.",
+  "Initial LP supply": "Aprovizionare inițială de LP"
 }

@@ -199,5 +199,6 @@
   "Select Token Tips": "Encuentre un token buscando su nombre o símbolo o pegando su dirección a continuación.",
   "Browse lists": "Explorar listas",
   "These tokens are commonly paired with other tokens": "Estos tokens suelen combinarse con otros tokens.",
-  "Swap Input Confirm Tips": "Se estima la producción. \nRecibirá al menos <b>{{token}}</b> o la transacción se revertirá."
+  "Swap Input Confirm Tips": "Se estima la producción. \nRecibirá al menos <b>{{token}}</b> o la transacción se revertirá.",
+  "Initial LP supply": "Suministro inicial de LP"
 }

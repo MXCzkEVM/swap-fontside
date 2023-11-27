@@ -199,5 +199,6 @@
   "Select Token Tips": "Adını veya sembolünü arayarak veya adresini aşağıya yapıştırarak bir jeton bulun.",
   "Browse lists": "Listelere göz atın",
   "These tokens are commonly paired with other tokens": "Bu tokenlar genellikle diğer tokenlarla eşleştirilir.",
-  "Swap Input Confirm Tips": "Çıktı tahmin ediliyor. \nEn az <b>{{token}</b> alacaksınız, aksi takdirde işlem geri dönecektir."
+  "Swap Input Confirm Tips": "Çıktı tahmin ediliyor. \nEn az <b>{{token}</b> alacaksınız, aksi takdirde işlem geri dönecektir.",
+  "Initial LP supply": "İlk LP tedariki"
 }
