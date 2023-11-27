@@ -7,7 +7,7 @@ type FormaticSupportedChains = Extract<ChainId, ChainId.MAINNET | ChainId.WANNSE
 
 const CHAIN_ID_NETWORK_ARGUMENT: { readonly [chainId in FormaticSupportedChains]: string | undefined } = {
   [ChainId.MAINNET]: undefined,
-  [ChainId.WANNSEE]: undefined,
+  [ChainId.WANNSEE]: undefined
   // [ChainId.ROPSTEN]: 'ropsten',
   // [ChainId.RINKEBY]: 'rinkeby',
   // [ChainId.KOVAN]: 'kovan'
@@ -28,7 +28,7 @@ export class FortmaticConnector extends FortmaticConnectorCore {
 
     const provider = this.fortmatic.getProvider()
 
-    const pollForOverlayReady = new Promise(resolve => {
+    const pollForOverlayReady = new Promise<void>(resolve => {
       const interval = setInterval(() => {
         if (provider.overlayReady) {
           clearInterval(interval)

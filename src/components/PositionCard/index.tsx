@@ -1,6 +1,7 @@
-import { JSBI, Pair, Percent } from '@uniswap/sdk'
+/* eslint-disable @typescript-eslint/no-use-before-define */
+import { JSBI, Pair, Percent, TokenAmount } from '@uniswap/sdk'
 import { darken } from 'polished'
-import React, { useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
@@ -22,6 +23,9 @@ import { AutoRow, RowBetween, RowFixed } from '../Row'
 import { Dots } from '../swap/styleds'
 import { INFO_URL } from '../../constants/lists'
 import { useTranslation } from 'react-i18next'
+import { GET_LIQUIDITY_RESERVES } from '../../graphql'
+import { useQuery } from '@apollo/client'
+import { BigNumber } from 'bignumber.js'
 
 export const FixedHeightRow = styled(RowBetween)`
   height: 24px;
@@ -44,6 +48,15 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
   const { account } = useActiveWeb3React()
   const { t } = useTranslation()
 
+  const { data, loading } = useQuery(GET_LIQUIDITY_RESERVES, {
+    variables: {
+      userId: account?.toLowerCase(),
+      token0: pair.token0.address.toLowerCase(),
+      token1: pair.token1.address.toLowerCase()
+    },
+    pollInterval: 50000
+  })
+
   const currency0 = showUnwrapped ? pair.token0 : unwrappedToken(pair.token0)
   const currency1 = showUnwrapped ? pair.token1 : unwrappedToken(pair.token1)
 
@@ -63,6 +76,29 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
           pair.getLiquidityValue(pair.token1, totalPoolTokens, userPoolBalance, false)
         ]
       : [undefined, undefined]
+
+  const pairRecord = useMemo(() => {
+    let liquidityPositions: any[]
+    liquidityPositions = data?.liquidityPositions || []
+    liquidityPositions = liquidityPositions.map<any>(l => l.pair)
+
+    if (!liquidityPositions.length) return
+
+    const records = liquidityPositions.filter((l: any) => {
+      return (
+        l.token0.id === pair.token0.address.toLowerCase() &&
+        l.token0.symbol === pair.token0.symbol?.toLocaleUpperCase() &&
+        l.token1.id === pair.token1.address.toLowerCase() &&
+        l.token1.symbol === pair.token1.symbol?.toLocaleUpperCase()
+      )
+    })
+
+    console.log(records)
+    if (!records[0]) return
+
+    return records[0]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, pair, loading])
 
   return (
     <>
@@ -89,36 +125,41 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
                 </Text>
               </RowFixed>
             </FixedHeightRow>
-            <AutoColumn gap="4px">
-              <FixedHeightRow>
-                <Text color="#888D9B" fontSize={16} fontWeight={500}>
-                  {currency0.symbol}:
-                </Text>
-                {token0Deposited ? (
+            <PositionAmounts
+              l={{
+                symbol: currency0.symbol,
+                amount: token0Deposited?.toSignificant(6, undefined, 0),
+                apy: calculateApy(pairRecord?.reserve0, token0Deposited?.toExact(), pairRecord?.createdAtTimestamp)
+              }}
+              p={{
+                symbol: currency1.symbol,
+                amount: token1Deposited?.toSignificant(6, undefined, 0),
+                apy: calculateApy(pairRecord?.reserve1, token1Deposited?.toExact(), pairRecord?.createdAtTimestamp)
+              }}
+            />
+            {pairRecord && (
+              <>
+                <FixedHeightRow>
                   <RowFixed>
-                    <Text color="#888D9B" fontSize={16} fontWeight={500} marginLeft={'6px'}>
-                      {token0Deposited?.toSignificant(6)}
+                    <Text fontWeight={500} fontSize={16}>
+                      {t('Initial LP supply')}
                     </Text>
                   </RowFixed>
-                ) : (
-                  '-'
-                )}
-              </FixedHeightRow>
-              <FixedHeightRow>
-                <Text color="#888D9B" fontSize={16} fontWeight={500}>
-                  {currency1.symbol}:
-                </Text>
-                {token1Deposited ? (
-                  <RowFixed>
-                    <Text color="#888D9B" fontSize={16} fontWeight={500} marginLeft={'6px'}>
-                      {token1Deposited?.toSignificant(6)}
-                    </Text>
-                  </RowFixed>
-                ) : (
-                  '-'
-                )}
-              </FixedHeightRow>
-            </AutoColumn>
+                </FixedHeightRow>
+
+                {}
+                <PositionAmounts
+                  l={{
+                    symbol: currency0.symbol,
+                    amount: trimZeroEnd(new BigNumber(pairRecord.reserve0).toFixed(3, BigNumber.ROUND_DOWN))
+                  }}
+                  p={{
+                    symbol: currency1.symbol,
+                    amount: trimZeroEnd(new BigNumber(pairRecord.reserve1).toFixed(3, BigNumber.ROUND_DOWN))
+                  }}
+                />
+              </>
+            )}
           </AutoColumn>
         </GreyCard>
       )}
@@ -245,4 +286,80 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
       </AutoColumn>
     </HoverCard>
   )
+}
+
+export function PositionAmounts(props: {
+  l: { amount?: string; symbol?: string; apy?: string | number }
+  p: { amount?: string; symbol?: string; apy?: string | number }
+}) {
+  return (
+    <>
+      <AutoColumn gap="4px">
+        <FixedHeightRow>
+          <Text color="#888D9B" fontSize={16} fontWeight={500}>
+            {props.l.symbol}:
+          </Text>
+          {props.l.amount ? (
+            <RowFixed>
+              <Text color="#888D9B" fontSize={16} fontWeight={500} marginLeft={'6px'}>
+                {props.l.amount}
+                {props.l.apy ? `(${props.l.apy})` : ''}
+              </Text>
+            </RowFixed>
+          ) : (
+            '-'
+          )}
+        </FixedHeightRow>
+        <FixedHeightRow>
+          <Text color="#888D9B" fontSize={16} fontWeight={500}>
+            {props.p.symbol}:
+          </Text>
+          {props.p.amount ? (
+            <RowFixed>
+              <Text color="#888D9B" fontSize={16} fontWeight={500} marginLeft={'6px'}>
+                {props.p.amount}
+                {props.p.apy ? `(${props.p.apy})` : ''}
+              </Text>
+            </RowFixed>
+          ) : (
+            '-'
+          )}
+        </FixedHeightRow>
+      </AutoColumn>
+    </>
+  )
+}
+function trimZeroEnd(input: string | number) {
+  input = String(input)
+  const dotIndex = input.indexOf('.')
+  if (dotIndex === -1) {
+    // 如果没有小数点，直接返回原始字符串
+    return input
+  }
+
+  let end = input.length - 1
+  while (end > dotIndex && input[end] === '0') end--
+  if (input[end] === '.') end--
+  return input.substring(0, end + 1)
+}
+function calculateApy(init: number | string | undefined = 0, end: number | string = init, timestamp = 0) {
+  if (init === 0) return 0
+
+  const principal = Number(init)
+  const finalAmount = Number(end)
+  const days = Number(daysAgoFromTimestamp(timestamp))
+
+  const rate = (finalAmount / principal - 1) * (365 / days) * 100
+
+  const value = trimZeroEnd(Number(rate.toFixed(4)))
+  if (Number(value) === 0 || value.startsWith('-')) return 0
+  return value === '0' ? 0 : `${value}%`
+}
+
+function daysAgoFromTimestamp(unixTimestamp: number) {
+  const timestampDate = new Date(unixTimestamp * 1000)
+  const currentDate = new Date()
+  const differenceInMilliseconds = currentDate.getTime() - timestampDate.getTime()
+  const differenceInDays = Math.floor(differenceInMilliseconds / (24 * 60 * 60 * 1000))
+  return differenceInDays
 }
