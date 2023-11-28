@@ -99,8 +99,6 @@
   "Dismiss": "Tutup",
   "Pooled": "Berdagang Bersama",
   "Your pool tokens": "Token kolam Anda",
-  "Your pool tokensYour pool share": "Token kolam AndaBagian kolam Anda",
-  "Your pool tokensYour pool shareView pool information": "Token kolam AndaBagikan kolamLihat informasi kolam",
   "Add": "Tambah",
   "Remove": "Hapus",
   "Common bases": "Basis Umum",
@@ -200,5 +198,7 @@
   "Browse lists": "Telusuri daftar",
   "These tokens are commonly paired with other tokens": "Token ini biasanya dipasangkan dengan token lainnya.",
   "Swap Input Confirm Tips": "Output diperkirakan. \nAnda akan menerima setidaknya <b>{{token}}</b> atau transaksi akan dikembalikan.",
-  "Initial LP supply": "Pasokan LP awal"
+  "Initial LP supply": "Pasokan LP awal",
+  "Your pool share": "Berbagi kolam renang Anda",
+  "View pool information": "Lihat informasi kolam"
 }

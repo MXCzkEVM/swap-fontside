@@ -99,8 +99,6 @@
   "Dismiss": "Отклонить",
   "Pooled": "Объединенный",
   "Your pool tokens": "Ваши токены пула",
-  "Your pool tokensYour pool share": "Ваши токены пула\nВаша доля в пуле",
-  "Your pool tokensYour pool shareView pool information": "Ваши токены пула\nВаша доля в пуле\nПросмотреть информацию о пуле",
   "Add": "Добавить",
   "Remove": "Удалить",
   "Common bases": "Общие основы",
@@ -200,5 +198,7 @@
   "Browse lists": "Просмотр списков",
   "These tokens are commonly paired with other tokens": "Эти токены обычно сочетаются с другими токенами.",
   "Swap Input Confirm Tips": "Выход оценивается. \nВы получите как минимум <b>{{token}}</b>, иначе транзакция будет отменена.",
-  "Initial LP supply": "Первоначальная поставка пластинок"
+  "Initial LP supply": "Первоначальная поставка пластинок",
+  "Your pool share": "Ваша доля в пуле",
+  "View pool information": "Посмотреть информацию о бассейне"
 }

@@ -99,8 +99,6 @@
   "Dismiss": "Annulla",
   "Pooled": "Raggruppato",
   "Your pool tokens": "I tuoi token del pool",
-  "Your pool tokensYour pool share": "I tuoi token del poolLa tua quota del pool",
-  "Your pool tokensYour pool shareView pool information": "I tuoi token del poolLa tua quota del poolVisualizza le informazioni del pool",
   "Add": "Aggiungi",
   "Remove": "Rimuovi",
   "Common bases": "Basi comuni",
@@ -200,5 +198,7 @@
   "Browse lists": "Sfoglia elenchi",
   "These tokens are commonly paired with other tokens": "Questi token sono comunemente abbinati ad altri token.",
   "Swap Input Confirm Tips": "La produzione è stimata. \nRiceverai almeno <b>{{token}}</b> o la transazione verrà annullata.",
-  "Initial LP supply": "Fornitura iniziale di LP"
+  "Initial LP supply": "Fornitura iniziale di LP",
+  "Your pool share": "La tua quota in piscina",
+  "View pool information": "Visualizza le informazioni sulla piscina"
 }

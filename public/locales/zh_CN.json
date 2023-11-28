@@ -99,8 +99,6 @@
   "Dismiss": "忽略",
   "Pooled": "共享的",
   "Your pool tokens": "您的矿池代币",
-  "Your pool tokensYour pool share": "您的矿池代币您的矿池份额",
-  "Your pool tokensYour pool shareView pool information": "你的矿池代币\n你的矿池份额\n查看矿池信息",
   "Add": "添加",
   "Remove": "删除",
   "Common bases": "常见基础",
@@ -200,5 +198,7 @@
   "Browse lists": "浏览列表",
   "These tokens are commonly paired with other tokens": "这些代币通常与其他代币配对。",
   "Swap Input Confirm Tips": "输出是估计的。\n您将至少收到<b>{{token}}</b>，否则交易将恢复。",
-  "Initial LP supply": "初始流动池"
+  "Initial LP supply": "初始流动池",
+  "Your pool share": "您的矿池份额",
+  "View pool information": "查看池信息"
 }

@@ -260,7 +260,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
             </FixedHeightRow>
             <FixedHeightRow>
               <Text fontSize={16} fontWeight={500}>
-                {t('Your pool tokensYour pool share')}:
+                {t('Your pool share')}:
               </Text>
               <Text fontSize={16} fontWeight={500}>
                 {poolTokenPercentage ? poolTokenPercentage.toFixed(2) + '%' : '-'}
@@ -269,7 +269,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
 
             <AutoRow justify="center" marginTop={'10px'}>
               <ExternalLink href={`${INFO_URL}/pair/${pair.liquidityToken.address}`}>
-                {t('Your pool tokensYour pool shareView pool information')} ↗
+                {t('View pool information')} ↗
               </ExternalLink>
             </AutoRow>
             <RowBetween marginTop="10px">

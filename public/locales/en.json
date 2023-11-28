@@ -101,8 +101,6 @@
   "Dismiss": "Dismiss",
   "Pooled": "Pooled",
   "Your pool tokens": "Your pool tokens",
-  "Your pool tokensYour pool share": "Your pool tokensYour pool share",
-  "Your pool tokensYour pool shareView pool information": "Your pool tokensYour pool shareView pool information",
   "Add": "Add",
   "Remove": "Remove",
   "Common bases": "Common bases",
@@ -201,5 +199,7 @@
   "These tokens are commonly paired with other tokens": "These tokens are commonly paired with other tokens.",
   "Swap Input Confirm Tips": "Output is estimated. You will receive at least <b>{{token}}</b>  or the transaction will revert.",
   "Swap Output Confirm Tips": "Input is estimated. You will sell at most <b>{{token}}</b>  or the transaction will revert.",
-  "Initial LP supply": "Initial LP supply"
+  "Initial LP supply": "Initial LP supply",
+  "Your pool share": "Your pool share",
+  "View pool information": "View pool information"
 }

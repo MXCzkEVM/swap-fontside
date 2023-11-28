@@ -99,8 +99,6 @@
   "Dismiss": "閉じる",
   "Pooled": "プール化された",
   "Your pool tokens": "あなたのプールトークン",
-  "Your pool tokensYour pool share": "あなたのプールトークンあなたのプールシェア",
-  "Your pool tokensYour pool shareView pool information": "あなたのプールトークン\nあなたのプールシェア\nプール情報を見る",
   "Add": "追加",
   "Remove": "削除",
   "Common bases": "一般的な基準",
@@ -200,5 +198,7 @@
   "Browse lists": "リストを参照する",
   "These tokens are commonly paired with other tokens": "これらのトークンは通常、他のトークンとペアになります。",
   "Swap Input Confirm Tips": "出力は推定です。\n少なくとも <b>{{token}}</b> を受け取ることになります。そうでない場合、トランザクションは元に戻ります。",
-  "Initial LP supply": "初期LP供給"
+  "Initial LP supply": "初期LP供給",
+  "Your pool share": "あなたのプールシェア",
+  "View pool information": "プール情報の表示"
 }

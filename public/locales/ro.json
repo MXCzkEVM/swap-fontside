@@ -99,8 +99,6 @@
   "Dismiss": "Renunță",
   "Pooled": "Împreunat",
   "Your pool tokens": "Tokenurile tale de pool",
-  "Your pool tokensYour pool share": "Tokenurile tale de poolPartea ta din pool",
-  "Your pool tokensYour pool shareView pool information": "Tokenurile tale de poolPartea ta din poolVizualizează informațiile poolului",
   "Add": "Adaugă",
   "Remove": "Eliminați",
   "Common bases": "Baze comune",
@@ -200,5 +198,7 @@
   "Browse lists": "Răsfoiți liste",
   "These tokens are commonly paired with other tokens": "Aceste jetoane sunt de obicei asociate cu alte jetoane.",
   "Swap Input Confirm Tips": "Ieșirea este estimată. \nVeți primi cel puțin <b>{{token}}</b> sau tranzacția va reveni.",
-  "Initial LP supply": "Aprovizionare inițială de LP"
+  "Initial LP supply": "Aprovizionare inițială de LP",
+  "Your pool share": "Cota dvs. de piscină",
+  "View pool information": "Vizualizați informații despre piscină"
 }
