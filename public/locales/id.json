@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "Output diperkirakan. \nAnda akan menerima setidaknya <b>{{token}}</b> atau transaksi akan dikembalikan.",
   "Initial LP supply": "Pasokan LP awal",
   "Your pool share": "Berbagi kolam renang Anda",
-  "View pool information": "Lihat informasi kolam"
+  "View pool information": "Lihat informasi kolam",
+  "Initial": "Awal"
 }

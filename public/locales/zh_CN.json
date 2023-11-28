@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "输出是估计的。\n您将至少收到<b>{{token}}</b>，否则交易将恢复。",
   "Initial LP supply": "初始流动池",
   "Your pool share": "您的矿池份额",
-  "View pool information": "查看池信息"
+  "View pool information": "查看池信息",
+  "Initial": "最初的"
 }

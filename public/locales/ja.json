@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "出力は推定です。\n少なくとも <b>{{token}}</b> を受け取ることになります。そうでない場合、トランザクションは元に戻ります。",
   "Initial LP supply": "初期LP供給",
   "Your pool share": "あなたのプールシェア",
-  "View pool information": "プール情報の表示"
+  "View pool information": "プール情報の表示",
+  "Initial": "イニシャル"
 }

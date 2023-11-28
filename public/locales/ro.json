@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "Ieșirea este estimată. \nVeți primi cel puțin <b>{{token}}</b> sau tranzacția va reveni.",
   "Initial LP supply": "Aprovizionare inițială de LP",
   "Your pool share": "Cota dvs. de piscină",
-  "View pool information": "Vizualizați informații despre piscină"
+  "View pool information": "Vizualizați informații despre piscină",
+  "Initial": "Iniţială"
 }

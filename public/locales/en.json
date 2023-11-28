@@ -201,5 +201,6 @@
   "Swap Output Confirm Tips": "Input is estimated. You will sell at most <b>{{token}}</b>  or the transaction will revert.",
   "Initial LP supply": "Initial LP supply",
   "Your pool share": "Your pool share",
-  "View pool information": "View pool information"
+  "View pool information": "View pool information",
+  "Initial": "Initial"
 }

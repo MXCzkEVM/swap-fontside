@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "De output wordt geschat. \nJe ontvangt minimaal <b>{{token}}</b>, anders wordt de transactie teruggedraaid.",
   "Initial LP supply": "Eerste LP-levering",
   "Your pool share": "Uw zwembadaandeel",
-  "View pool information": "Bekijk zwembadinformatie"
+  "View pool information": "Bekijk zwembadinformatie",
+  "Initial": "Voorletter"
 }

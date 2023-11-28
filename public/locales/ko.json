@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "생산량이 추정됩니다. \n최소한 <b>{{token}}</b>을 받게 되며 그렇지 않으면 거래가 취소됩니다.",
   "Initial LP supply": "초도 LP 공급",
   "Your pool share": "귀하의 수영장 공유",
-  "View pool information": "풀 정보 보기"
+  "View pool information": "풀 정보 보기",
+  "Initial": "초기의"
 }

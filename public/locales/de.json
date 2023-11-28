@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "Die Leistung wird geschätzt. \nSie erhalten mindestens <b>{{token}}</b>, sonst wird die Transaktion rückgängig gemacht.",
   "Initial LP supply": "Erstversorgung mit LP",
   "Your pool share": "Ihr Poolanteil",
-  "View pool information": "Poolinformationen anzeigen"
+  "View pool information": "Poolinformationen anzeigen",
+  "Initial": "Anfänglich"
 }

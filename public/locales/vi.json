@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "Sản lượng được ước tính. \nBạn sẽ nhận được ít nhất <b>{{token}</b> nếu không giao dịch sẽ hoàn nguyên.",
   "Initial LP supply": "Nguồn cung cấp LP ban đầu",
   "Your pool share": "Chia sẻ nhóm của bạn",
-  "View pool information": "Xem thông tin hồ bơi"
+  "View pool information": "Xem thông tin hồ bơi",
+  "Initial": "Ban đầu"
 }

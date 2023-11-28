@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "Çıktı tahmin ediliyor. \nEn az <b>{{token}</b> alacaksınız, aksi takdirde işlem geri dönecektir.",
   "Initial LP supply": "İlk LP tedariki",
   "Your pool share": "Havuz paylaşımınız",
-  "View pool information": "Havuz bilgilerini görüntüle"
+  "View pool information": "Havuz bilgilerini görüntüle",
+  "Initial": "İlk"
 }

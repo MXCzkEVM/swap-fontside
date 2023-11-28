@@ -200,5 +200,6 @@
   "Swap Input Confirm Tips": "La production est estimée. \nVous recevrez au moins <b>{{token}}</b> ou la transaction sera annulée.",
   "Initial LP supply": "Approvisionnement initial en LP",
   "Your pool share": "Votre part de piscine",
-  "View pool information": "Afficher les informations sur la piscine"
+  "View pool information": "Afficher les informations sur la piscine",
+  "Initial": "Initial"
 }

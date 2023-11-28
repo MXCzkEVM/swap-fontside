@@ -48,15 +48,6 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
   const { account } = useActiveWeb3React()
   const { t } = useTranslation()
 
-  const { data, loading } = useQuery(GET_LIQUIDITY_RESERVES, {
-    variables: {
-      userId: account?.toLowerCase(),
-      token0: pair.token0.address.toLowerCase(),
-      token1: pair.token1.address.toLowerCase()
-    },
-    pollInterval: 50000
-  })
-
   const currency0 = showUnwrapped ? pair.token0 : unwrappedToken(pair.token0)
   const currency1 = showUnwrapped ? pair.token1 : unwrappedToken(pair.token1)
 
@@ -77,27 +68,9 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
         ]
       : [undefined, undefined]
 
-  const pairRecord = useMemo(() => {
-    let liquidityPositions: any[]
-    liquidityPositions = data?.liquidityPositions || []
-    liquidityPositions = liquidityPositions.map<any>(l => l.pair)
-
-    if (!liquidityPositions.length) return
-
-    const records = liquidityPositions.filter((l: any) => {
-      return (
-        l.token0.id === pair.token0.address.toLowerCase() &&
-        l.token0.symbol === pair.token0.symbol?.toLocaleUpperCase() &&
-        l.token1.id === pair.token1.address.toLowerCase() &&
-        l.token1.symbol === pair.token1.symbol?.toLocaleUpperCase()
-      )
-    })
-
-    if (!records[0]) return
-
-    return records[0]
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, pair, loading])
+  const pairRecord = usePairRecord(pair)
+  const [reserve0, reserve1] = usePositionAmounts(pairRecord)
+  const [apy0, apy1] = useCalculateApy(pairRecord, token0Deposited, token1Deposited)
 
   return (
     <>
@@ -128,12 +101,12 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
               l={{
                 symbol: currency0.symbol,
                 amount: token0Deposited?.toSignificant(6, undefined, 0),
-                apy: calculateApy(pairRecord?.reserve0, token0Deposited?.toExact(), pairRecord?.createdAtTimestamp)
+                apy: apy0
               }}
               p={{
                 symbol: currency1.symbol,
                 amount: token1Deposited?.toSignificant(6, undefined, 0),
-                apy: calculateApy(pairRecord?.reserve1, token1Deposited?.toExact(), pairRecord?.createdAtTimestamp)
+                apy: apy1
               }}
             />
             {pairRecord && (
@@ -145,16 +118,14 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
                     </Text>
                   </RowFixed>
                 </FixedHeightRow>
-
-                {}
                 <PositionAmounts
                   l={{
                     symbol: currency0.symbol,
-                    amount: trimZeroEnd(new BigNumber(pairRecord.reserve0).toFixed(3, BigNumber.ROUND_DOWN))
+                    amount: reserve0
                   }}
                   p={{
                     symbol: currency1.symbol,
-                    amount: trimZeroEnd(new BigNumber(pairRecord.reserve1).toFixed(3, BigNumber.ROUND_DOWN))
+                    amount: reserve1
                   }}
                 />
               </>
@@ -195,6 +166,10 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
         ]
       : [undefined, undefined]
 
+  const pairRecord = usePairRecord(pair)
+  const [reserve0, reserve1] = usePositionAmounts(pairRecord)
+  const [apy0, apy1] = useCalculateApy(pairRecord, token0Deposited, token1Deposited)
+
   return (
     <HoverCard border={border}>
       <AutoColumn gap="12px">
@@ -225,6 +200,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
                 <RowFixed>
                   <Text fontSize={16} fontWeight={500} marginLeft={'6px'}>
                     {token0Deposited?.toSignificant(6)}
+                    {apy0 ? `(${apy0})` : ''}
                   </Text>
                   <CurrencyLogo size="20px" style={{ marginLeft: '8px' }} currency={currency0} />
                 </RowFixed>
@@ -243,6 +219,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
                 <RowFixed>
                   <Text fontSize={16} fontWeight={500} marginLeft={'6px'}>
                     {token1Deposited?.toSignificant(6)}
+                    {apy1 ? `(${apy1})` : ''}
                   </Text>
                   <CurrencyLogo size="20px" style={{ marginLeft: '8px' }} currency={currency1} />
                 </RowFixed>
@@ -250,6 +227,32 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
                 '-'
               )}
             </FixedHeightRow>
+
+            {pairRecord && (
+              <>
+                <FixedHeightRow>
+                  <RowFixed>
+                    <Text fontWeight={500} fontSize={16}>
+                      {t('Initial')} {currency0.symbol}:
+                    </Text>
+                  </RowFixed>
+                  <Text fontSize={16} fontWeight={500}>
+                    {reserve0}
+                  </Text>
+                </FixedHeightRow>
+                <FixedHeightRow>
+                  <RowFixed>
+                    <Text fontWeight={500} fontSize={16}>
+                      {t('Initial')} {currency1.symbol}:
+                    </Text>
+                  </RowFixed>
+                  <Text fontSize={16} fontWeight={500}>
+                    {reserve1}
+                  </Text>
+                </FixedHeightRow>
+              </>
+            )}
+
             <FixedHeightRow>
               <Text fontSize={16} fontWeight={500}>
                 {t('Your pool tokens')}:
@@ -328,6 +331,53 @@ export function PositionAmounts(props: {
     </>
   )
 }
+
+function usePairRecord(pair: Pair) {
+  const { account } = useActiveWeb3React()
+  const { data, loading } = useQuery(GET_LIQUIDITY_RESERVES, {
+    variables: {
+      userId: account?.toLowerCase(),
+      token0: pair.token0.address.toLowerCase(),
+      token1: pair.token1.address.toLowerCase()
+    },
+    pollInterval: 50000
+  })
+  return useMemo(() => {
+    let liquidityPositions: any[]
+    liquidityPositions = data?.liquidityPositions || []
+    liquidityPositions = liquidityPositions.map<any>(l => l.pair)
+
+    if (!liquidityPositions.length) return
+
+    const records = liquidityPositions.filter((l: any) => {
+      return (
+        l.token0.id === pair.token0.address.toLowerCase() &&
+        l.token0.symbol === pair.token0.symbol?.toLocaleUpperCase() &&
+        l.token1.id === pair.token1.address.toLowerCase() &&
+        l.token1.symbol === pair.token1.symbol?.toLocaleUpperCase()
+      )
+    })
+
+    if (!records[0]) return
+
+    return records[0]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, pair, loading])
+}
+function usePositionAmounts(record: any) {
+  if (!record) return ['', '']
+  return [
+    trimZeroEnd(new BigNumber(record.reserve0).toFixed(3, BigNumber.ROUND_DOWN)),
+    trimZeroEnd(new BigNumber(record.reserve1).toFixed(3, BigNumber.ROUND_DOWN))
+  ]
+}
+function useCalculateApy(record: any, token0?: TokenAmount, token1?: TokenAmount) {
+  return [
+    calculateApy(record?.reserve0, token0?.toExact(), record?.createdAtTimestamp),
+    calculateApy(record?.reserve0, token1?.toExact(), record?.createdAtTimestamp)
+  ]
+}
+
 function trimZeroEnd(input: string | number) {
   input = String(input)
   const dotIndex = input.indexOf('.')
@@ -354,7 +404,6 @@ function calculateApy(init: number | string | undefined = 0, end: number | strin
   if (Number(value) === 0 || value.startsWith('-')) return 0
   return value === '0' ? 0 : `${value}%`
 }
-
 function daysAgoFromTimestamp(unixTimestamp: number) {
   const timestampDate = new Date(unixTimestamp * 1000)
   const currentDate = new Date()
