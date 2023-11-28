@@ -2,8 +2,10 @@ import { gql } from '@apollo/client'
 
 export const GET_LIQUIDITY_RESERVES = gql`
   query get_liquidityPositions_reserves($userId: ID) {
-    liquidityPositions(where: { user: $userId }) {
+    liquidityPositionSnapshots(where: { user: $userId }) {
+      liquidityTokenBalance
       pair {
+        totalSupply
         reserve0
         reserve1
         id
@@ -17,8 +19,8 @@ export const GET_LIQUIDITY_RESERVES = gql`
           id
           symbol
         }
-        createdAtTimestamp
       }
+      timestamp
     }
   }
 `

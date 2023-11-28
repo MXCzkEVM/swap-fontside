@@ -343,29 +343,41 @@ function usePairRecord(pair: Pair) {
     pollInterval: 50000
   })
   return useMemo(() => {
-    let liquidityPositions: any[]
-    liquidityPositions = data?.liquidityPositions || []
-    liquidityPositions = liquidityPositions.map<any>(l => l.pair)
+    const liquidityPositions: any[] = [...(data?.liquidityPositionSnapshots || [])]
 
     if (!liquidityPositions.length) return
 
+    liquidityPositions.sort((a, b) => Number(a.timestamp) - Number(b.timestamp))
+
     const records = liquidityPositions.filter((l: any) => {
       return (
-        l.token0.id === pair.token0.address.toLowerCase() &&
-        l.token0.symbol === pair.token0.symbol?.toLocaleUpperCase() &&
-        l.token1.id === pair.token1.address.toLowerCase() &&
-        l.token1.symbol === pair.token1.symbol?.toLocaleUpperCase()
+        l.pair.token0.id === pair.token0.address.toLowerCase() &&
+        l.pair.token0.symbol === pair.token0.symbol?.toLocaleUpperCase() &&
+        l.pair.token1.id === pair.token1.address.toLowerCase() &&
+        l.pair.token1.symbol === pair.token1.symbol?.toLocaleUpperCase()
       )
     })
 
-    if (!records[0]) return
+    const [record] = records
+    if (!record) return
+    const lpBalance = new BigNumber(record.liquidityTokenBalance)
+    const lpTotal = new BigNumber(record.pair.totalSupply)
+    const share = lpBalance.div(lpTotal)
+    const reserves = [record.pair.reserve0, record.pair.reserve1]
+    const [reserve0, reserve1] = reserves.map(r => share.multipliedBy(r)).map(b => b.toString())
 
-    return records[0]
+    const parsed = {
+      reserve0,
+      reserve1,
+      createdAtTimestamp: record.timestamp
+    }
+    return parsed
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, pair, loading])
 }
 function usePositionAmounts(record: any) {
   if (!record) return ['', '']
+
   return [
     trimZeroEnd(new BigNumber(record.reserve0).toFixed(3, BigNumber.ROUND_DOWN)),
     trimZeroEnd(new BigNumber(record.reserve1).toFixed(3, BigNumber.ROUND_DOWN))
