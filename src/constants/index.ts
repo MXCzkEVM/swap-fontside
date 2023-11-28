@@ -1,19 +1,21 @@
+/* eslint-disable */
 import { ChainId, JSBI, Percent, Token, WETH } from '@uniswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-const NETWORK_CHAIN_ID: ChainId = process.env.REACT_APP_CHAIN_ID ? parseInt(process.env.REACT_APP_CHAIN_ID) : ChainId.WANNSEEMAINNET
+const NETWORK_CHAIN_ID: ChainId = process.env.REACT_APP_CHAIN_ID
+  ? parseInt(process.env.REACT_APP_CHAIN_ID)
+  : ChainId.WANNSEEMAINNET
 
 const Router_MAP: { [key in ChainId]: string } = {
-  [ChainId.MAINNET]: "0x",
+  [ChainId.MAINNET]: '0x',
   [ChainId.WANNSEE]: '0xCaf6FE52B3b2948EFe7EA72C1ffd0B49C5FB030E',
-  [ChainId.WANNSEEMAINNET]: "0x757e5af94fC9b3d4035C2e6Cb1fD304F43c0A1A4",
-  [ChainId.HARDHAT]: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+  [ChainId.WANNSEEMAINNET]: '0x757e5af94fC9b3d4035C2e6Cb1fD304F43c0A1A4',
+  [ChainId.HARDHAT]: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9'
 }
 
 export const ROUTER_ADDRESS = Router_MAP[NETWORK_CHAIN_ID]
-
 
 // a list of tokens by chain
 type ChainTokenList = {
