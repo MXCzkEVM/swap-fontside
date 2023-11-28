@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import { gql } from '@apollo/client'
 
 export const GET_LIQUIDITY_RESERVES = gql`
   query get_liquidityPositions_reserves($userId: ID) {
