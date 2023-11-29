@@ -57,8 +57,6 @@ export default function Pool() {
 
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
 
-  const hasV1Liquidity = useUserHasLiquidityInAllTokens()
-
   return (
     <>
       <AppBody>
@@ -106,9 +104,9 @@ export default function Pool() {
 
             <div>
               <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
-                {hasV1Liquidity ? 'Uniswap V1 liquidity found!' : t('Dont pool you joined')}{' '}
-                <StyledInternalLink id="import-pool-link" to={hasV1Liquidity ? '/migrate/v1' : '/find'}>
-                  {hasV1Liquidity ? 'Migrate now.' : `${t('Import it')}.`}
+                {t('Dont pool you joined')}{' '}
+                <StyledInternalLink id="import-pool-link" to="/find">
+                  {t('Import it')}.
                 </StyledInternalLink>
               </Text>
             </div>
