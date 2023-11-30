@@ -405,10 +405,11 @@ function calculateApy(init: number | string | undefined = 0, end: number | strin
 
   const principal = Number(init)
   const finalAmount = Number(end)
-  const days = Number(daysAgoFromTimestamp(timestamp)) || 1
+  const days = Number(daysAgoFromTimestamp(timestamp))
 
   const rate = (finalAmount / principal - 1) * (365 / days) * 100
 
+  if (rate === 0) return 0
   const value = trimZeroEnd(Number(rate.toFixed(4)))
   if (Number(value) === 0 || value.startsWith('-')) return 0
   return value === '0' ? 0 : `${value}%`
