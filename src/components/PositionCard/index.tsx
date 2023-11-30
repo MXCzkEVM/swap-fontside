@@ -351,10 +351,7 @@ function usePairRecord(pair: Pair) {
 
     const records = liquidityPositions.filter((l: any) => {
       return (
-        l.pair.token0.id === pair.token0.address.toLowerCase() &&
-        l.pair.token0.symbol === pair.token0.symbol?.toLocaleUpperCase() &&
-        l.pair.token1.id === pair.token1.address.toLowerCase() &&
-        l.pair.token1.symbol === pair.token1.symbol?.toLocaleUpperCase()
+        l.pair.token0.id === pair.token0.address.toLowerCase() && l.pair.token1.id === pair.token1.address.toLowerCase()
       )
     })
 
@@ -408,7 +405,7 @@ function calculateApy(init: number | string | undefined = 0, end: number | strin
 
   const principal = Number(init)
   const finalAmount = Number(end)
-  const days = Number(daysAgoFromTimestamp(timestamp))
+  const days = Number(daysAgoFromTimestamp(timestamp)) || 1
 
   const rate = (finalAmount / principal - 1) * (365 / days) * 100
 
