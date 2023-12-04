@@ -412,6 +412,7 @@ function calculateApy(init: number | string | undefined = 0, end: number | strin
   if (rate === 0) return 0
   const value = trimZeroEnd(Number(rate.toFixed(4)))
   if (Number(value) === 0 || value.startsWith('-')) return 0
+  if (Number(value) === Infinity) return 0
   return value === '0' ? 0 : `${value}%`
 }
 function daysAgoFromTimestamp(unixTimestamp: number) {
