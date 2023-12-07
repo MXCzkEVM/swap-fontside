@@ -113,6 +113,7 @@
   "Need help": "需要幫助嗎？",
   "Minimum received": "最低收到",
   "Maximum sold": "最大售出量",
+  "List your token": "列出您的代币",
   "Your transaction will revert": "如果在交易確認前出現大幅度的不利價格變動，您的交易將會撤銷。",
   "Your transaction will revert unfavorably": "如果價格不利地變動超過此百分比，您的交易將會撤銷。",
   "The difference between the market": "由於交易規模，市場價格與預估價格之間的差異。",

@@ -376,6 +376,10 @@ export function ListSelect({ onDismiss, onBack }: { onDismiss: () => void; onBac
       <div style={{ padding: '16px', textAlign: 'center' }}>
         <ExternalLink href="https://tokenlists.org">{t('Browse lists')}</ExternalLink>
       </div>
+      <Separator />
+      <div style={{ padding: '16px', textAlign: 'center' }}>
+        <ExternalLink href="https://swap.mxc.com/#/swap">{t('List your token')}</ExternalLink>
+      </div>
     </Column>
   )
 }
