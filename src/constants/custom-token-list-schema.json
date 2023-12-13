@@ -76,7 +76,7 @@
     "TokenInfo": {
       "type": "object",
       "description": "Metadata for a single token in a token list",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "properties": {
         "chainId": {
           "type": "integer",
