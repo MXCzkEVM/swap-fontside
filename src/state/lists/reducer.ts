@@ -32,17 +32,14 @@ type Mutable<T> = { -readonly [P in keyof T]: T[P] extends ReadonlyArray<infer U
 let defaultList: any = Object.assign({}, UNISWAP_DEFAULT_LIST)
 defaultList.tokens = []
 
-export const fetchDefaultTokenList = createAsyncThunk(
-  'tokenList/fetchDefault',
-  async () => {
-    const response = await fetch(DEFAULT_TOKEN_LIST_URL);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    return data.tokens;
+export const fetchDefaultTokenList = createAsyncThunk('tokenList/fetchDefault', async () => {
+  const response = await fetch(DEFAULT_TOKEN_LIST_URL)
+  if (!response.ok) {
+    throw new Error('Network response was not ok')
   }
-);
+  const data = await response.json()
+  return data.tokens
+})
 
 const initialState: ListsState = {
   lastInitializedDefaultListOfLists: DEFAULT_LIST_OF_LISTS,

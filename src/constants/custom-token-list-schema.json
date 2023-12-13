@@ -133,7 +133,7 @@
           "maxLength": 200,
           "examples": ["this is a introduction"]
         },
-        "circulating-supply": {
+        "circulatingSupply": {
           "type": "integer",
           "description": "The circulating supply for the token",
           "minLength": 1,
