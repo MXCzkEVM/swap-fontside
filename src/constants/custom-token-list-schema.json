@@ -122,7 +122,6 @@
         "introduction": {
           "type": "string",
           "description": "The introduction for the token",
-          "pattern": "^[a-zA-Z0-9+\\-%/]+$",
           "minLength": 1,
           "maxLength": 500,
           "examples": ["this is a introduction"]
@@ -130,7 +129,6 @@
         "twitter": {
           "type": "string",
           "description": "The twitter for the token",
-          "pattern": "^[a-zA-Z0-9+\\-%/]+$",
           "minLength": 1,
           "maxLength": 200,
           "examples": ["this is a introduction"]
