@@ -102,6 +102,15 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     color: '#010101',
     primary: true
   },
+  OKXWallet: {
+    connector: injected,
+    name: 'OKX Wallet',
+    iconName: 'okx.webp',
+    description: 'OKX Web3 Wallet provider.',
+    href: null,
+    color: '#010101',
+    primary: true
+  },
   METAMASK: {
     connector: injected,
     name: 'MetaMask',
