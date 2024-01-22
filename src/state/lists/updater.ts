@@ -5,9 +5,10 @@ import { useActiveWeb3React } from '../../hooks'
 import { useFetchListCallback } from '../../hooks/useFetchListCallback'
 import useInterval from '../../hooks/useInterval'
 import useIsWindowVisible from '../../hooks/useIsWindowVisible'
-import { addPopup } from '../application/actions'
 import { AppDispatch, AppState } from '../index'
 import { acceptListUpdate } from './actions'
+
+import ReactGA from 'react-ga'
 
 export default function Updater(): null {
   const { library } = useActiveWeb3React()
@@ -54,19 +55,6 @@ export default function Updater(): null {
             // automatically update minor/patch as long as bump matches the min update
             if (bump >= min) {
               dispatch(acceptListUpdate(listUrl))
-              dispatch(
-                addPopup({
-                  key: listUrl,
-                  content: {
-                    listUpdate: {
-                      listUrl,
-                      oldList: list.current,
-                      newList: list.pendingUpdate,
-                      auto: true
-                    }
-                  }
-                })
-              )
             } else {
               console.error(
                 `List at url ${listUrl} could not automatically update because the version bump was only PATCH/MINOR while the update had breaking changes and should have been MAJOR`
@@ -75,20 +63,12 @@ export default function Updater(): null {
             break
 
           case VersionUpgrade.MAJOR:
-            dispatch(
-              addPopup({
-                key: listUrl,
-                content: {
-                  listUpdate: {
-                    listUrl,
-                    auto: false,
-                    oldList: list.current,
-                    newList: list.pendingUpdate
-                  }
-                },
-                removeAfterMs: null
-              })
-            )
+            ReactGA.event({
+              category: 'Lists',
+              action: 'Update List from Popup',
+              label: listUrl
+            })
+            dispatch(acceptListUpdate(listUrl))
         }
       }
     })
