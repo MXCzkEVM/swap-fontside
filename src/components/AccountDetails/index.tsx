@@ -22,6 +22,7 @@ import { ButtonSecondary } from '../Button'
 import { ExternalLink as LinkIcon } from 'react-feather'
 import { ExternalLink, LinkStyledButton, TYPE } from '../../theme'
 import { useTranslation } from 'react-i18next'
+import QuestionHelper from '../QuestionHelper'
 const chainName = process.env.REACT_APP_CHAIN_NAME
 
 const HeaderRow = styled.div`
@@ -402,7 +403,10 @@ export default function AccountDetails({
       {!!pendingTransactions.length || !!confirmedTransactions.length ? (
         <LowerSection>
           <AutoRow mb={'1rem'} style={{ justifyContent: 'space-between' }}>
-            <TYPE.body>{t('Recent Transactions')}</TYPE.body>
+            <TYPE.body style={{ display: 'flex', alignItems: 'center' }}>
+              <span style={{ marginTop: '-2px' }}>{t('Recent Transactions')}</span>
+              <QuestionHelper text={t('Recent Transactions Tips')} />
+            </TYPE.body>
             <LinkStyledButton onClick={clearAllTransactionsCallback}>{t('Clear All')}</LinkStyledButton>
           </AutoRow>
           {renderTransactions(pendingTransactions)}
