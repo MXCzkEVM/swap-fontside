@@ -133,7 +133,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   // [ChainId.GÖRLI]: 'Görli',
   // [ChainId.KOVAN]: 'Kovan',
   // [ChainId.GANACHE]: 'Ganache',
-  [ChainId.WANNSEE]: 'Wannsee',
+  [ChainId.GENEVA]: 'Geneva',
   [ChainId.WANNSEEMAINNET]: 'zkEVM Mainnet',
   [ChainId.HARDHAT]: 'Hardhat'
 }

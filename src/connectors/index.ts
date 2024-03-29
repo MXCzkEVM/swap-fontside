@@ -28,7 +28,7 @@ export function getNetworkLibrary(): Web3Provider {
 
 export const injected = new InjectedConnector({
   // supportedChainIds: [1, 3, 4, 5, 42]
-  supportedChainIds: [5167003, 1337, 31337, 18686]
+  supportedChainIds: [5167004, 1337, 31337, 18686]
 })
 
 // mainnet only
@@ -54,7 +54,7 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'Wannseeswap',
+  appName: 'GenevaSwap',
   appLogoUrl:
     'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg'
 })
