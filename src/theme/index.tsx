@@ -213,6 +213,6 @@ body {
   min-height: 100vh;
   background-position: 0 -30vh;
   background-repeat: no-repeat;
-  background-color: #2a0f69;
+  background-color: #101010;
 }
 `

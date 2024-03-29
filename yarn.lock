@@ -1889,6 +1889,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@moonchain/metadata@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@moonchain/metadata/-/metadata-0.0.1.tgz#1db7e8b1f3cee883f321a4a1ab8d86822dad4cd6"
+  integrity sha512-3qVa+nOv4q3gwvzD1c8TJKCvUc/rbAEnYw5g1sHoTaNiNUcYBl844TIIeDf8/WGdDf4pnpnhIkJQ30EzRoIYLw==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

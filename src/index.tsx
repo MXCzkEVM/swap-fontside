@@ -20,7 +20,7 @@ import './style/index.css'
 import './style/page.css'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './graphql'
-
+import '@moonchain/metadata/style.css'
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
 
 if ('ethereum' in window) {
