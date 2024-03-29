@@ -10,7 +10,7 @@ const NETWORK_CHAIN_ID: ChainId = process.env.REACT_APP_CHAIN_ID
 
 const Router_MAP: { [key in ChainId]: string } = {
   [ChainId.MAINNET]: '0x',
-  [ChainId.WANNSEE]: '0xCaf6FE52B3b2948EFe7EA72C1ffd0B49C5FB030E',
+  [ChainId.GENEVA]: '0x96adb4c80F6c934a20303d4b88f935F967299d5e',
   [ChainId.WANNSEEMAINNET]: '0x757e5af94fC9b3d4035C2e6Cb1fD304F43c0A1A4',
   [ChainId.HARDHAT]: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9'
 }
@@ -36,7 +36,7 @@ const WETH_ONLY: ChainTokenList = {
   // [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   // [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
   // [ChainId.GANACHE]: [WETH[ChainId.GANACHE]],
-  [ChainId.WANNSEE]: [WETH[ChainId.WANNSEE]],
+  [ChainId.GENEVA]: [WETH[ChainId.GENEVA]],
   [ChainId.WANNSEEMAINNET]: [WETH[ChainId.WANNSEEMAINNET]],
   [ChainId.HARDHAT]: [WETH[ChainId.HARDHAT]]
 }
