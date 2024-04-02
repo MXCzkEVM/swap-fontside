@@ -154,7 +154,7 @@ export default function Header(props: any) {
               style={{
                 fontFamily: 'spacex',
                 color: '#fff',
-                marginTop: isMobile ? '8px' : '4px',
+                marginTop: isMobile ? '14px' : '4px',
                 fontSize: isMobile ? '12px' : '18px'
               }}
             >
