@@ -290,7 +290,7 @@ export default function Swap() {
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
-      <SupportButton />
+      {/* <SupportButton /> */}
       <AppBody>
         <SwapPoolTabs active={'swap'} />
         <Wrapper id="swap-page">

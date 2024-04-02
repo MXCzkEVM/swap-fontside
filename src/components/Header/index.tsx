@@ -64,9 +64,6 @@ const Title = styled.a`
 const TitleText = styled(Row)`
   width: fit-content;
   white-space: nowrap;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    display: none;
-  `};
 `
 
 const AccountElement = styled.div<{ active: boolean }>`
@@ -142,14 +139,27 @@ export default function Header(props: any) {
   const { account, chainId } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  const [isDark] = useDarkModeManager()
 
   return (
     <HeaderFrame>
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
           <TitleText>
-            <span style={{ fontFamily: 'spacex', color: '#fff', marginTop: '4px' }}>MOONCHAIN</span>
+            {/* {isMobile ? (
+              <img width="32" src="https://raw.githubusercontent.com/MXCzkEVM/metadata/main/logo-circle.svg" />
+            ) : (
+              <span style={{ fontFamily: 'spacex', color: '#fff', marginTop: '4px' }}>MOONCHAIN</span>
+            )} */}
+            <span
+              style={{
+                fontFamily: 'spacex',
+                color: '#fff',
+                marginTop: isMobile ? '8px' : '4px',
+                fontSize: isMobile ? '12px' : '18px'
+              }}
+            >
+              MOONCHAIN
+            </span>
           </TitleText>
         </HeaderElement>
         <HeaderControls>
