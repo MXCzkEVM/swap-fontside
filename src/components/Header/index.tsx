@@ -131,7 +131,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   // [ChainId.KOVAN]: 'Kovan',
   // [ChainId.GANACHE]: 'Ganache',
   [ChainId.GENEVA]: 'Geneva',
-  [ChainId.WANNSEEMAINNET]: 'zkEVM Mainnet',
+  [ChainId.WANNSEEMAINNET]: 'Moonchain Mainnet',
   [ChainId.HARDHAT]: 'Hardhat'
 }
 
