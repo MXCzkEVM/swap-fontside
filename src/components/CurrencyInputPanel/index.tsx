@@ -235,7 +235,10 @@ export default function CurrencyInputPanel({
         <CurrencySearchModal
           isOpen={modalOpen}
           onDismiss={handleDismissSearch}
-          onCurrencySelect={onCurrencySelect}
+          onCurrencySelect={c => {
+            onCurrencySelect(c)
+            onUserInput('')
+          }}
           selectedCurrency={currency}
           otherSelectedCurrency={otherCurrency}
           showCommonBases={showCommonBases}

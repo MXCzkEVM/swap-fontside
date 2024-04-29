@@ -116,6 +116,7 @@ export function useSwapCallback(
 
   const swapCalls = useSwapCallArguments(trade, allowedSlippage, deadline, recipientAddressOrName)
 
+  // console.log(swapCalls)
   const addTransaction = useTransactionAdder()
 
   const { address: recipientAddress } = useENS(recipientAddressOrName)
@@ -199,6 +200,7 @@ export function useSwapCallback(
           gasEstimate
         } = successfulEstimation
 
+        console.log('successfulEstimation: ', successfulEstimation)
         return contract[methodName](...args, {
           gasLimit: calculateGasMargin(gasEstimate),
           ...(value && !isZero(value) ? { value, from: account } : { from: account })
