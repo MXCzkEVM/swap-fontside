@@ -25,7 +25,7 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   // 42: 'kovan.',
   // 1337: 'ganache',
   5167004: 'geneva-explorer.moonchain.com',
-  18686: 'explorer.mxc.com',
+  18686: 'explorer.moonchain.com',
   31337: 'hardhat'
 }
 

@@ -15,7 +15,7 @@ const Router_MAP: { [key in ChainId]: string } = {
 const Info_MAP: { [key in ChainId]: string } = {
   [ChainId.MAINNET]: `https://uniswap.info`,
   [ChainId.GENEVA]: `https://geneva-swap-info.moonchain.com`,
-  [ChainId.WANNSEEMAINNET]: `https://swap-info.mxc.com`,
+  [ChainId.WANNSEEMAINNET]: `https://swap-info.moonchain.com`,
   [ChainId.HARDHAT]: ''
 }
 
